@@ -1,0 +1,37 @@
+# BOGOODSKI.dev
+
+## Site
+- Name: BOGOODSKI.dev
+- URL: https://bogoodski.dev
+- Purpose: Personal consulting and advisory site for enterprise AI enablement services.
+
+## About
+Steve Bogucki is an independent enterprise AI enablement advisor. He helps large, regulated organizations move from AI interest to governed, secure, operational AI capability. His background includes leading AI enablement work inside a massive regulated federal environment, software development, analytics, business intelligence, data platforms, and enterprise product delivery.
+
+## Services
+- Enterprise AI enablement strategy
+- AI use-case lifecycle design
+- LLM access and governance patterns
+- RAG chatbot program design
+- AI software and vendor review
+- Executive and workforce AI upskilling
+- Technical product advisory
+
+## Ideal Audience
+- Senior executives (CIOs, CTOs, CDOs)
+- AI program leaders
+- Public-sector technology leaders
+- Regulated-enterprise teams
+- Product owners and data leaders
+- Organizations building internal AI services
+
+## Contact
+- Email: stevebogucki12@gmail.com
+- LinkedIn: https://www.linkedin.com/in/sbogucki12/
+
+## Thought Leadership
+- Article: "We Didn't Know What We Didn't Know: Standing Up Enterprise AI Services at Scale"
+- URL: https://medium.com/@bogoodski/we-didnt-know-what-we-didn-t-know-standing-up-enterprise-ai-services-at-scale-cf2fd7f169c8
+
+## Disclaimer
+BOGOODSKI.dev is an independent professional site by Steve Bogucki. The views and services described here are personal and do not represent or imply endorsement by any employer, government agency, or affiliated organization.
