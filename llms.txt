@@ -6,7 +6,7 @@
 - Purpose: Personal consulting and advisory site for enterprise AI enablement services.
 
 ## About
-Steve Bogucki is an independent enterprise AI enablement advisor. He helps large, regulated organizations move from AI interest to governed, secure, operational AI capability. His background includes leading AI enablement work inside a massive regulated federal environment, software development, analytics, business intelligence, data platforms, and enterprise product delivery.
+Steve Bogucki is an independent enterprise AI enablement advisor — one person, informal in tone, technical in substance. He helps big, complicated organizations make AI actually usable: the unglamorous work of access patterns, governance, security reviews, data controls, RAG programs, cost visibility, training, and production support. His background includes helping lead AI enablement work inside a massive regulated federal environment, plus prior experience in software development, analytics, business intelligence, data platforms, and enterprise product delivery.
 
 ## Services
 - Enterprise AI enablement strategy
