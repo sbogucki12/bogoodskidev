@@ -81,8 +81,8 @@ Headless Chrome on Windows enforces a ~500px minimum window width, so a `--windo
 ## 5. Roadmap / open items
 
 **High priority**
-- [ ] **Fix the domain.** *(In progress 2026-11-06: GoDaddy A `@` → 75.2.60.5 and CNAME `www` → bogoodski.netlify.app are set; the leftover GoDaddy "Parked" A record must be deleted, then provision the Netlify certificate.)* As of 2026-11-06, `https://bogoodski.dev` (and `www`) answer with a **301 to `https://bogoodski.netlify.app/`** (registrar URL forwarding). Crawlers and AI engines therefore see content on `netlify.app` while the canonical says `bogoodski.dev`. Fix: Netlify → Domain management → add `bogoodski.dev` as the **primary domain**, then at the registrar remove URL forwarding and point DNS at Netlify (apex A/ALIAS per Netlify's instructions, `www` CNAME → `bogoodski.netlify.app`, or delegate DNS to Netlify). Netlify then provisions TLS automatically.
-- [ ] **After** the domain serves directly from Netlify (not before, or it will loop): add a 301 in `netlify.toml` from `https://bogoodski.netlify.app/*` → `https://bogoodski.dev/:splat`.
+- [x] **Fix the domain.** Done 2026-11-06. GoDaddy DNS: `A @ → 75.2.60.5`, `CNAME www → bogoodski.netlify.app`, no forwarding, no "Parked" A record (if GoDaddy ever re-adds one, delete it: it splits traffic). Netlify: `bogoodski.dev` is primary; Let's Encrypt cert auto-renews (current one expires 2027-02-04). As of 2026-11-06, `https://bogoodski.dev` (and `www`) answer with a **301 to `https://bogoodski.netlify.app/`** (registrar URL forwarding). Crawlers and AI engines therefore see content on `netlify.app` while the canonical says `bogoodski.dev`. Fix: Netlify → Domain management → add `bogoodski.dev` as the **primary domain**, then at the registrar remove URL forwarding and point DNS at Netlify (apex A/ALIAS per Netlify's instructions, `www` CNAME → `bogoodski.netlify.app`, or delegate DNS to Netlify). Netlify then provisions TLS automatically.
+- [x] `bogoodski.netlify.app/*` → `https://bogoodski.dev/:splat` 301 added to `netlify.toml` (2026-11-06).
 - [ ] Run securityheaders.com and Google Rich Results Test against the live domain; fix anything flagged.
 
 **Soon**

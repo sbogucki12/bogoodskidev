@@ -2,7 +2,7 @@
 
 The personal site of **Steve Bogucki**: enterprise AI enablement advisory, plus a living example of the practices it talks about (AI-assisted building, security-first defaults, and content designed to be read by people *and* AI assistants).
 
-- **Live:** https://bogoodski.dev (currently forwarding to https://bogoodski.netlify.app; see [Open items](#open-items))
+- **Live:** https://bogoodski.dev (served directly by Netlify with a Let's Encrypt certificate; `www` and `bogoodski.netlify.app` 301 to it)
 - **Host:** Netlify, auto-deploying from `main`
 - **Stack:** hand-written static HTML, CSS, and vanilla JS. No framework, no build step, no trackers, no cookies, no third-party requests.
 - **Working notes for future sessions:** [`CLAUDE.md`](CLAUDE.md) (the project manifest: philosophy, conventions, roadmap)
@@ -96,8 +96,12 @@ A full review and overhaul, built with Claude Code.
 
 ---
 
+### 2026-11-06 (final): Domain moved onto Netlify
+- GoDaddy URL forwarding removed. DNS: `A @ → 75.2.60.5`, `CNAME www → bogoodski.netlify.app`; the leftover GoDaddy "Parked" A record was deleted. NS/SOA and the `_dmarc` TXT record are GoDaddy defaults and stay.
+- `bogoodski.dev` set as the primary domain in Netlify; Let's Encrypt certificate issued for `bogoodski.dev` and `www.bogoodski.dev`.
+- `bogoodski.netlify.app/*` now 301s to `https://bogoodski.dev/`, so there's one canonical host.
+- Added SoundCloud (DJ) to the linked profiles.
+
 ## Open items
 
-See the **Roadmap** in [`CLAUDE.md`](CLAUDE.md). The most important one:
-
-> **bogoodski.dev currently 301-redirects to bogoodski.netlify.app** (registrar URL forwarding). That splits identity between two hostnames and undercuts the canonical URL. Fix by adding `bogoodski.dev` as the primary custom domain in Netlify and pointing DNS at Netlify (not URL forwarding).
+See the **Roadmap** in [`CLAUDE.md`](CLAUDE.md).

@@ -86,6 +86,15 @@
   status = 404
   force = true
 
+# Consolidate the Netlify subdomain onto the real domain (one canonical host
+# for search engines and AI crawlers). Safe now that bogoodski.dev is served
+# by Netlify directly; adding this while the domain forwarded here would loop.
+[[redirects]]
+  from = "https://bogoodski.netlify.app/*"
+  to = "https://bogoodski.dev/:splat"
+  status = 301
+  force = true
+
 # Redirect www to root domain
 [[redirects]]
   from = "https://www.bogoodski.dev/*"
