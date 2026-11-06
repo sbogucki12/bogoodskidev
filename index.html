@@ -1,191 +1,243 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>BOGOODSKI.dev | Enterprise AI, but make it actually work | Steve Bogucki</title>
-  <meta name="description" content="One guy helping big, complicated organizations make AI actually usable. Steve Bogucki on the unglamorous stuff that decides whether AI survives outside a demo: access, governance, security, RAG, cost visibility, training, and the organizational plumbing nobody puts in the keynote deck.">
-  <meta name="keywords" content="enterprise AI enablement, AI governance, regulated AI adoption, public sector AI, AI operating model, RAG chatbot program, LLM access governance, AI software review, AI use case lifecycle, AI upskilling, machine learning training, generative AI strategy, secure AI implementation, responsible AI adoption">
+  <title>Steve Bogucki | Enterprise AI enablement, but make it actually work | BOGOODSKI.dev</title>
+  <meta name="description" content="Steve Bogucki helps big, complicated organizations make AI actually usable: LLM access governance, RAG programs, AI software review, use-case lifecycles, cost visibility, and AI training. The unglamorous plumbing nobody puts in the keynote deck.">
   <meta name="author" content="Steve Bogucki">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="theme-color" content="#0c0f1a">
+  <meta name="color-scheme" content="dark">
+
+  <link rel="canonical" href="https://bogoodski.dev/">
 
   <!-- OpenGraph -->
-  <meta property="og:title" content="BOGOODSKI.dev | Enterprise AI, but make it actually work">
-  <meta property="og:description" content="One guy helping big, complicated organizations make AI actually usable — governance, secure access, RAG, training, and all the weird plumbing nobody puts in the keynote deck.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://bogoodski.dev">
-  <meta property="og:image" content="https://bogoodski.dev/assets/social.png">
+  <meta property="og:site_name" content="BOGOODSKI.dev">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="profile">
+  <meta property="profile:first_name" content="Steve">
+  <meta property="profile:last_name" content="Bogucki">
+  <meta property="profile:username" content="bogoodski">
+  <meta property="og:title" content="Steve Bogucki | Enterprise AI, but make it actually work">
+  <meta property="og:description" content="One guy helping big, complicated organizations make AI actually usable: governance, secure LLM access, RAG, training, and all the weird plumbing nobody puts in the keynote deck.">
+  <meta property="og:url" content="https://bogoodski.dev/">
+  <meta property="og:image" content="https://bogoodski.dev/assets/img/social-card.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="BOGOODSKI.dev social card: Steve Bogucki, Enterprise AI Enablement. Strategy, governance, LLM access, RAG programs, upskilling.">
 
   <!-- Twitter/X Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="BOGOODSKI.dev | Enterprise AI, but make it actually work">
-  <meta name="twitter:description" content="One guy helping big, complicated organizations make AI actually usable — governance, secure access, RAG, training, and all the weird plumbing nobody puts in the keynote deck.">
-  <meta name="twitter:image" content="https://bogoodski.dev/assets/social.png">
+  <meta name="twitter:title" content="Steve Bogucki | Enterprise AI, but make it actually work">
+  <meta name="twitter:description" content="One guy helping big, complicated organizations make AI actually usable: governance, secure LLM access, RAG, training, and all the weird plumbing nobody puts in the keynote deck.">
+  <meta name="twitter:image" content="https://bogoodski.dev/assets/img/social-card.jpg">
+  <meta name="twitter:image:alt" content="BOGOODSKI.dev social card: Steve Bogucki, Enterprise AI Enablement.">
 
-  <link rel="canonical" href="https://bogoodski.dev">
-  <link rel="icon" type="image/png" href="assets/favicon.png">
-  <link rel="stylesheet" href="styles.css">
+  <!-- Icons & manifest -->
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32.png">
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
 
-  <!-- JSON-LD Structured Data -->
+  <!-- Machine-readable versions of this page, for AI assistants -->
+  <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLM-friendly site summary">
+  <link rel="alternate" type="text/markdown" href="/llms-full.txt" title="LLM-friendly full site content">
+
+  <link rel="preload" href="/assets/fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/styles.css">
+
+  <!-- JSON-LD Structured Data (data block; not executed) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "WebSite",
+        "@id": "https://bogoodski.dev/#website",
         "name": "BOGOODSKI.dev",
-        "url": "https://bogoodski.dev",
-        "description": "Enterprise AI enablement advisory by Steve Bogucki",
-        "author": {
-          "@type": "Person",
-          "name": "Steve Bogucki"
-        }
+        "alternateName": "Steve Bogucki: Enterprise AI Enablement",
+        "url": "https://bogoodski.dev/",
+        "inLanguage": "en-US",
+        "description": "Enterprise AI enablement advisory by Steve Bogucki.",
+        "publisher": { "@id": "https://bogoodski.dev/#person" },
+        "author": { "@id": "https://bogoodski.dev/#person" }
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": "https://bogoodski.dev/#webpage",
+        "url": "https://bogoodski.dev/",
+        "name": "Steve Bogucki | Enterprise AI enablement, but make it actually work",
+        "inLanguage": "en-US",
+        "isPartOf": { "@id": "https://bogoodski.dev/#website" },
+        "about": { "@id": "https://bogoodski.dev/#person" },
+        "mainEntity": { "@id": "https://bogoodski.dev/#person" },
+        "primaryImageOfPage": { "@id": "https://bogoodski.dev/#headshot" },
+        "dateModified": "2026-11-06",
+        "hasPart": [
+          { "@type": "WebPageElement", "name": "The everything-around-AI problem", "url": "https://bogoodski.dev/#problem" },
+          { "@type": "WebPageElement", "name": "Services", "url": "https://bogoodski.dev/#services" },
+          { "@type": "WebPageElement", "name": "Approach", "url": "https://bogoodski.dev/#approach" },
+          { "@type": "WebPageElement", "name": "Technical toolbox", "url": "https://bogoodski.dev/#toolbox" },
+          { "@type": "WebPageElement", "name": "Experience", "url": "https://bogoodski.dev/#experience" },
+          { "@type": "WebPageElement", "name": "Field note", "url": "https://bogoodski.dev/#article" },
+          { "@type": "WebPageElement", "name": "Who this is for", "url": "https://bogoodski.dev/#who-for" },
+          { "@type": "WebPageElement", "name": "FAQ", "url": "https://bogoodski.dev/#faq" },
+          { "@type": "WebPageElement", "name": "About Steve", "url": "https://bogoodski.dev/#about" },
+          { "@type": "WebPageElement", "name": "How this site was built with AI", "url": "https://bogoodski.dev/#built-with-ai" },
+          { "@type": "WebPageElement", "name": "Contact", "url": "https://bogoodski.dev/#contact" }
+        ]
+      },
+      {
+        "@type": "ImageObject",
+        "@id": "https://bogoodski.dev/#headshot",
+        "url": "https://bogoodski.dev/assets/img/steve-bogucki-720.jpg",
+        "contentUrl": "https://bogoodski.dev/assets/img/steve-bogucki-720.jpg",
+        "width": 720,
+        "height": 720,
+        "caption": "Steve Bogucki",
+        "description": "Real photo of Steve Bogucki with a moderate AI-assisted touch-up."
       },
       {
         "@type": "Person",
+        "@id": "https://bogoodski.dev/#person",
         "name": "Steve Bogucki",
-        "url": "https://bogoodski.dev",
-        "email": "stevebogucki12@gmail.com",
-        "sameAs": [
-          "https://www.linkedin.com/in/sbogucki12/"
-        ],
+        "givenName": "Steve",
+        "familyName": "Bogucki",
+        "alternateName": ["BOGOODSKI", "bogoodski"],
+        "url": "https://bogoodski.dev/",
+        "image": { "@id": "https://bogoodski.dev/#headshot" },
+        "email": "mailto:stevebogucki12@gmail.com",
         "jobTitle": "Enterprise AI Enablement Advisor",
-        "description": "Enterprise AI enablement advisor, AI governance and implementation practitioner, software delivery and analytics enablement leader, and machine learning trained practitioner.",
+        "description": "Enterprise AI enablement advisor and practitioner who has helped stand up AI services inside a large, heavily regulated public-sector environment: governed LLM access, RAG programs, AI software review, AI strategy, and AI/ML training. Background in software development, web development, BI, analytics enablement, product ownership, and enterprise platforms.",
+        "sameAs": [
+          "https://www.linkedin.com/in/sbogucki12/",
+          "https://medium.com/@bogoodski"
+        ],
+        "hasCredential": {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Machine Learning Certificate",
+          "credentialCategory": "certificate",
+          "recognizedBy": { "@type": "CollegeOrUniversity", "name": "Cornell University", "sameAs": "https://www.cornell.edu/" }
+        },
         "knowsAbout": [
           "Enterprise AI enablement",
           "AI governance",
-          "Large language model access patterns",
-          "Retrieval-augmented generation",
+          "AI operating models",
+          "Large language models",
+          "LLM access governance",
+          "API gateways for LLMs",
+          "Identity and access management (IAM)",
+          "Amazon Bedrock",
+          "Retrieval-augmented generation (RAG)",
+          "Vector embeddings and semantic search",
+          "LLM evaluation and groundedness",
           "AI use-case lifecycle design",
+          "AI software and vendor risk review",
+          "NIST AI Risk Management Framework",
+          "Agentic AI and the Model Context Protocol",
           "Machine learning",
+          "Transformers",
+          "AI workforce upskilling",
           "Software delivery",
           "Analytics enablement",
-          "Enterprise architecture"
+          "Product ownership"
         ]
       },
       {
         "@type": "ProfessionalService",
+        "@id": "https://bogoodski.dev/#business",
         "name": "BOGOODSKI.dev",
-        "url": "https://bogoodski.dev",
-        "description": "Independent AI enablement advisory and consulting for regulated organizations.",
-        "provider": {
-          "@type": "Person",
-          "name": "Steve Bogucki"
-        },
-        "email": "stevebogucki12@gmail.com",
+        "url": "https://bogoodski.dev/",
+        "description": "Independent enterprise AI enablement advisory and consulting for large, regulated, and public-sector organizations.",
+        "logo": "https://bogoodski.dev/assets/icons/icon-512.png",
+        "image": "https://bogoodski.dev/assets/img/social-card.jpg",
+        "email": "mailto:stevebogucki12@gmail.com",
+        "founder": { "@id": "https://bogoodski.dev/#person" },
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
           "name": "AI Enablement Services",
           "itemListElement": [
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Enterprise AI Enablement Strategy",
-                "description": "Help leaders define the operating model, governance path, service catalog, stakeholder roles, and practical roadmap for AI adoption."
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "AI Governance Advisory",
-                "description": "Advise on enterprise access models for LLMs, including API gateway concepts, token management, approved model pathways, cost visibility, and responsible usage controls."
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "RAG Chatbot Program Design",
-                "description": "Help organizations stand up self-service or managed retrieval-augmented generation programs grounded in approved documents and enterprise knowledge."
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "LLM Access Governance",
-                "description": "Design enterprise access patterns for large language models with cost controls, security boundaries, and approved model pathways."
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "AI Software Review",
-                "description": "Review AI-enabled tools with attention to data controls, model training claims, retention, residency, logging, privacy, security posture, and operational risk."
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "AI Workforce Upskilling",
-                "description": "Deliver approachable training for leadership and staff on AI fundamentals, machine learning, LLMs, transformers, RAG, governance, and practical use-case development."
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "AI Use-Case Lifecycle Design",
-                "description": "Design the intake, triage, consulting, data readiness, governance, provisioning, build, deployment, monitoring, and sustainment process for AI use cases."
-              }
-            }
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://bogoodski.dev/#service-ai-enablement-strategy", "url": "https://bogoodski.dev/#service-ai-enablement-strategy", "name": "Enterprise AI Enablement Strategy", "provider": { "@id": "https://bogoodski.dev/#person" }, "description": "Help leaders define the operating model, governance path, service catalog, ownership, and a practical roadmap for AI adoption." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://bogoodski.dev/#service-ai-use-case-lifecycle", "url": "https://bogoodski.dev/#service-ai-use-case-lifecycle", "name": "AI Use-Case Lifecycle Design", "provider": { "@id": "https://bogoodski.dev/#person" }, "description": "Design intake, triage, consulting, data readiness, governance checkpoints, provisioning, build, deployment, monitoring, and sustainment for AI use cases." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://bogoodski.dev/#service-llm-access-governance", "url": "https://bogoodski.dev/#service-llm-access-governance", "name": "LLM Access & Governance Patterns", "provider": { "@id": "https://bogoodski.dev/#person" }, "description": "Enterprise access models for large language models: API gateways, IAM and token management, approved model pathways, cost visibility, and responsible-use controls." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://bogoodski.dev/#service-rag-program-design", "url": "https://bogoodski.dev/#service-rag-program-design", "name": "RAG Chatbot Program Design", "provider": { "@id": "https://bogoodski.dev/#person" }, "description": "Stand up self-service or managed retrieval-augmented generation programs grounded in approved documents and enterprise knowledge." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://bogoodski.dev/#service-ai-vendor-review", "url": "https://bogoodski.dev/#service-ai-vendor-review", "name": "AI Software & Vendor Review", "provider": { "@id": "https://bogoodski.dev/#person" }, "description": "Review AI-enabled tools for data controls, model training claims, retention, residency, logging, privacy, security posture, and operational risk." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://bogoodski.dev/#service-ai-upskilling", "url": "https://bogoodski.dev/#service-ai-upskilling", "name": "Executive & Workforce AI Upskilling", "provider": { "@id": "https://bogoodski.dev/#person" }, "description": "Approachable, technically honest training on AI fundamentals, machine learning, LLMs, transformers, RAG, governance, and use-case development." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://bogoodski.dev/#service-technical-product-advisory", "url": "https://bogoodski.dev/#service-technical-product-advisory", "name": "Technical Product Advisory", "provider": { "@id": "https://bogoodski.dev/#person" }, "description": "Bridge executives, engineers, security, and data teams so AI services become real, supported products." } }
           ]
         }
       },
       {
+        "@type": "BlogPosting",
+        "@id": "https://bogoodski.dev/#field-note",
+        "headline": "We Didn't Know What We Didn't Know: Standing Up Enterprise AI Services at Scale",
+        "url": "https://medium.com/@bogoodski/we-didnt-know-what-we-didn-t-know-standing-up-enterprise-ai-services-at-scale-cf2fd7f169c8",
+        "author": { "@id": "https://bogoodski.dev/#person" },
+        "publisher": { "@type": "Organization", "name": "Medium", "url": "https://medium.com/" },
+        "about": ["Enterprise AI enablement", "AI governance", "LLM access", "AI adoption in regulated organizations"]
+      },
+      {
         "@type": "FAQPage",
+        "@id": "https://bogoodski.dev/#faq",
+        "url": "https://bogoodski.dev/#faq",
+        "isPartOf": { "@id": "https://bogoodski.dev/#webpage" },
         "mainEntity": [
           {
             "@type": "Question",
+            "@id": "https://bogoodski.dev/#faq-what-is-enterprise-ai-enablement",
             "name": "What is enterprise AI enablement?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Enterprise AI enablement is the work of helping large organizations safely adopt AI capabilities. It includes designing operating models, setting up governed access to AI tools and large language models, creating use-case lifecycles, building RAG programs, reviewing AI software, and training the workforce. It goes well beyond model selection to address governance, security, cost, data readiness, and operational sustainment."
-            }
+            "acceptedAnswer": { "@type": "Answer", "text": "Enterprise AI enablement is the work of helping large organizations adopt AI safely, usefully, and at scale. It covers the operating model, governed access to large language models, use-case intake and lifecycle, RAG programs, AI software review, cost visibility, and workforce training. Picking a model is maybe ten percent of it. The other ninety percent is making sure the thing is secure, owned, funded, understood, and still running six months after the launch party." }
           },
           {
             "@type": "Question",
+            "@id": "https://bogoodski.dev/#faq-why-ai-pilots-fail",
+            "name": "Why do so many enterprise AI pilots never make it to production?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Most AI pilots stall because of everything around the model, not the model itself. Common culprits include unanswered security and data questions, governance reviews that act like bottlenecks, no clear owner for the service or the bill, and no plan for monitoring and support once real users arrive. A pilot proves something can work. Production proves somebody is willing to be responsible for it." }
+          },
+          {
+            "@type": "Question",
+            "@id": "https://bogoodski.dev/#faq-rag-program",
+            "name": "What does a RAG chatbot program need beyond the chatbot itself?",
+            "acceptedAnswer": { "@type": "Answer", "text": "A RAG (retrieval-augmented generation) program needs a governed document ingestion pipeline, sensible chunking and embedding choices, permission-aware retrieval, citations users can verify, evaluation for groundedness and answer quality, cost tracking, and a clear support and ownership model. The chatbot is the storefront. The program is the warehouse, the supply chain, and the people who restock the shelves." }
+          },
+          {
+            "@type": "Question",
+            "@id": "https://bogoodski.dev/#faq-llm-access-governance",
+            "name": "How should an organization govern access to large language models?",
+            "acceptedAnswer": { "@type": "Answer", "text": "A practical pattern is a central API gateway in front of approved model providers, with least-privilege IAM roles, per-team credentials and quotas, an approved-model allow-list, token metering for cost visibility, logging, and input and output guardrails. The goal is access that is safe enough for the security team and fast enough that employees don't go hunting for unsanctioned workarounds." }
+          },
+          {
+            "@type": "Question",
+            "@id": "https://bogoodski.dev/#faq-ai-software-review",
+            "name": "What should you check before approving an AI-enabled software tool?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Before approving an AI tool, confirm whether your data is used to train the vendor's models (and whether that's guaranteed in the contract), how long prompts and outputs are retained, where data is stored and processed, which subprocessors are involved, whether SSO and audit logging are supported, and how the vendor handles security incidents. For public-sector buyers, authorization status such as FedRAMP matters too." }
+          },
+          {
+            "@type": "Question",
+            "@id": "https://bogoodski.dev/#faq-who-steve-works-with",
             "name": "Who does Steve Bogucki work with?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Steve works with senior executives, CIOs, CTOs, CDOs, AI program leaders, public-sector technology leaders, regulated-enterprise teams, product owners, and data and analytics leaders. His ideal clients are organizations navigating the practical challenges of AI adoption in complex, governed environments."
-            }
+            "acceptedAnswer": { "@type": "Answer", "text": "Steve works with senior executives, CIOs, CTOs, CDOs, AI program leaders, public-sector technology leaders, regulated-enterprise teams, product owners, and data and analytics leaders. Basically, anyone trying to move AI from interesting to operational inside a complex, governed organization. He's also happy to talk with organizations that are building out their own internal AI teams." }
           },
           {
             "@type": "Question",
-            "name": "Does BOGOODSKI.dev represent a government agency?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No. BOGOODSKI.dev is an independent professional site by Steve Bogucki. The views and services described here are personal and do not represent or imply endorsement by any employer, government agency, or affiliated organization."
-            }
+            "@id": "https://bogoodski.dev/#faq-ai-training",
+            "name": "Can Steve train executives and non-technical staff on AI?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Steve has delivered AI and machine learning training to broad enterprise audiences, covering supervised and unsupervised learning, transformers, bidirectional context, large language models, RAG, governance, and practical use-case development. The training is technically accurate but approachable, built so that non-engineers walk away more confident rather than more confused." }
           },
           {
             "@type": "Question",
-            "name": "Can Steve help with RAG chatbot programs?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Steve has experience helping establish self-service RAG chatbot programs in large enterprise environments. He can advise on program design, document ingestion, governance, access patterns, and operational sustainment for retrieval-augmented generation initiatives."
-            }
+            "@id": "https://bogoodski.dev/#faq-affiliation",
+            "name": "Does BOGOODSKI.dev represent a government agency or employer?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. BOGOODSKI.dev is an independent professional site by Steve Bogucki. The views and services described here are personal and do not represent or imply endorsement by any employer, government agency, or affiliated organization." }
           },
           {
             "@type": "Question",
-            "name": "Can Steve review AI-enabled software?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Steve has personally reviewed AI-related software requests with attention to security, privacy, data controls, model training claims, data retention and residency, logging practices, and governance concerns. He can help organizations build a repeatable review framework for evaluating AI tools."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can Steve train executives and staff on AI?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Steve has delivered AI and machine learning training across large organizations, covering supervised and unsupervised learning, transformers, bidirectional context, large language models, RAG, governance, and practical enterprise AI implementation. His training is technically accurate but approachable for non-technical audiences."
-            }
+            "@id": "https://bogoodski.dev/#faq-built-with-ai",
+            "name": "Was this website built with AI?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes, openly and on purpose. The site was designed and coded with Claude Code, Anthropic's agentic coding tool, and the copy was drafted with AI help and then edited by Steve until it sounded like him. The headshot is a real photo with a moderate AI touch-up, and the logo and social image were generated with ChatGPT. Every claim on the page is Steve's to stand behind." }
           }
         ]
       }
@@ -199,13 +251,13 @@
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <!-- Header -->
-  <header class="site-header" role="banner">
+  <header class="site-header">
     <div class="container header-inner">
-      <a href="#" class="logo" aria-label="BOGOODSKI.dev home">
+      <a href="/" class="logo" aria-label="BOGOODSKI.dev home">
         <span class="logo-name">BOGOODSKI</span><span class="logo-dot">.dev</span>
       </a>
-      <nav class="main-nav" role="navigation" aria-label="Main navigation">
-        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+      <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
           <span class="nav-toggle-bar"></span>
           <span class="nav-toggle-bar"></span>
           <span class="nav-toggle-bar"></span>
@@ -213,8 +265,9 @@
         <ul id="nav-menu" class="nav-list">
           <li><a href="#services" class="nav-link">Services</a></li>
           <li><a href="#approach" class="nav-link">Approach</a></li>
+          <li><a href="#toolbox" class="nav-link">Toolbox</a></li>
           <li><a href="#experience" class="nav-link">Experience</a></li>
-          <li><a href="#article" class="nav-link">Article</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
@@ -222,10 +275,10 @@
     </div>
   </header>
 
-  <main id="main-content">
+  <main id="main-content" tabindex="-1">
 
     <!-- Hero -->
-    <section class="hero" aria-labelledby="hero-heading">
+    <section class="hero" id="top" aria-labelledby="hero-heading">
       <div class="container hero-inner">
         <div class="hero-content">
           <h1 id="hero-heading">Helping big, complicated organizations make AI actually usable.</h1>
@@ -237,7 +290,10 @@
           </div>
         </div>
         <div class="hero-image">
-          <img src="assets/profile.png" alt="Steve Bogucki, enterprise AI enablement advisor" width="400" height="400" loading="eager">
+          <picture>
+            <source type="image/webp" srcset="/assets/img/steve-bogucki-360.webp 360w, /assets/img/steve-bogucki-720.webp 720w" sizes="(max-width: 768px) 240px, 360px">
+            <img src="/assets/img/steve-bogucki-360.jpg" srcset="/assets/img/steve-bogucki-360.jpg 360w, /assets/img/steve-bogucki-720.jpg 720w" sizes="(max-width: 768px) 240px, 360px" alt="Steve Bogucki, enterprise AI enablement advisor, smiling in a tan knit polo" width="360" height="360" fetchpriority="high" decoding="async">
+          </picture>
         </div>
       </div>
     </section>
@@ -245,41 +301,23 @@
     <!-- Problem / Stakes -->
     <section class="section problem" id="problem" aria-labelledby="problem-heading">
       <div class="container">
-        <h2 id="problem-heading">Most organizations don't have an AI problem. They have an everything-around-AI problem.</h2>
+        <div class="heading-row">
+          <h2 id="problem-heading">Most organizations don't have an AI problem. They have an everything-around-AI problem.</h2>
+          <a class="anchor-link" href="#problem" aria-label="Link to this section: the everything-around-AI problem"></a>
+        </div>
         <div class="problem-grid">
           <div class="problem-text">
             <p>Everyone knows AI matters. The pressure is real, the slides are flashy, the budgets are getting approved. But actually operationalizing this stuff inside a big, complicated organization is a totally different sport.</p>
             <p>Here's what tends to happen instead:</p>
           </div>
           <ul class="problem-list">
-            <li>
-              <span class="problem-icon" aria-hidden="true">&#9679;</span>
-              <span>Pilots that crush the demo and then quietly never scale.</span>
-            </li>
-            <li>
-              <span class="problem-icon" aria-hidden="true">&#9679;</span>
-              <span>Security and data questions that nobody can fully answer, so nothing moves.</span>
-            </li>
-            <li>
-              <span class="problem-icon" aria-hidden="true">&#9679;</span>
-              <span>Governance reviews that turn into bottlenecks instead of guardrails.</span>
-            </li>
-            <li>
-              <span class="problem-icon" aria-hidden="true">&#9679;</span>
-              <span>Nobody quite owns AI services, tooling, or the bill.</span>
-            </li>
-            <li>
-              <span class="problem-icon" aria-hidden="true">&#9679;</span>
-              <span>Tool sprawl, because every team quietly bought or built their own thing.</span>
-            </li>
-            <li>
-              <span class="problem-icon" aria-hidden="true">&#9679;</span>
-              <span>Employees are experimenting way faster than policy can keep up with.</span>
-            </li>
-            <li>
-              <span class="problem-icon" aria-hidden="true">&#9679;</span>
-              <span>Leaders can see the potential, they just can't find the path from "interested" to "in production."</span>
-            </li>
+            <li>Pilots that crush the demo and then quietly never scale.</li>
+            <li>Security and data questions that nobody can fully answer, so nothing moves.</li>
+            <li>Governance reviews that turn into bottlenecks instead of guardrails.</li>
+            <li>Nobody quite owns AI services, tooling, or the bill.</li>
+            <li>Tool sprawl, because every team quietly bought or built their own thing.</li>
+            <li>Employees are experimenting way faster than policy can keep up with.</li>
+            <li>Leaders can see the potential, they just can't find the path from "interested" to "in production."</li>
           </ul>
         </div>
         <p class="problem-closer">None of these are technology failures. They're enablement failures. The model is rarely the hard part. The hard part is everything around it: access, data, cost, policy, security, training, ownership, and the unglamorous job of keeping the thing alive once it's live.</p>
@@ -290,43 +328,67 @@
     <section class="section services" id="services" aria-labelledby="services-heading">
       <div class="container">
         <div class="section-intro">
-          <h2 id="services-heading">Stuff I can help with</h2>
+          <div class="heading-row">
+            <h2 id="services-heading">Stuff I can help with</h2>
+            <a class="anchor-link" href="#services" aria-label="Link to this section: services"></a>
+          </div>
           <p>Advisory, consulting, and roll-up-the-sleeves help across the full spectrum of enterprise AI enablement. Or, as I sometimes call it, "the parts that aren't fun on a slide."</p>
         </div>
         <div class="services-grid">
 
-          <article class="service-card">
-            <h3>Enterprise AI Enablement Strategy</h3>
+          <article class="service-card" id="service-ai-enablement-strategy">
+            <div class="heading-row">
+              <h3>Enterprise AI Enablement Strategy</h3>
+              <a class="anchor-link" href="#service-ai-enablement-strategy" aria-label="Link to Enterprise AI Enablement Strategy"></a>
+            </div>
             <p>Help leaders sort out the operating model, governance path, service catalog, who-owns-what, and a roadmap that actually fits your org. Not a glossy deck that quietly dies in a SharePoint folder. A real plan that respects how the place actually works.</p>
           </article>
 
-          <article class="service-card">
-            <h3>AI Use-Case Lifecycle Design</h3>
+          <article class="service-card" id="service-ai-use-case-lifecycle">
+            <div class="heading-row">
+              <h3>AI Use-Case Lifecycle Design</h3>
+              <a class="anchor-link" href="#service-ai-use-case-lifecycle" aria-label="Link to AI Use-Case Lifecycle Design"></a>
+            </div>
             <p>Design the whole journey for AI use cases: intake, triage, consulting, data readiness, governance checkpoints, provisioning, build, deployment, monitoring, sustainment. Most orgs skip straight to building. The lifecycle is the thing that makes any of it repeatable.</p>
           </article>
 
-          <article class="service-card">
-            <h3>LLM Access &amp; Governance Patterns</h3>
-            <p>Help shape enterprise access models for LLMs — API gateway concepts, token and access management, approved model pathways, cost visibility, responsible-use controls. The goal is safe access that people can actually use without filing six tickets.</p>
+          <article class="service-card" id="service-llm-access-governance">
+            <div class="heading-row">
+              <h3>LLM Access &amp; Governance Patterns</h3>
+              <a class="anchor-link" href="#service-llm-access-governance" aria-label="Link to LLM Access and Governance Patterns"></a>
+            </div>
+            <p>Help shape enterprise access models for LLMs: API gateway concepts, token and access management, approved model pathways, cost visibility, responsible-use controls. The goal is safe access that people can actually use without filing six tickets.</p>
           </article>
 
-          <article class="service-card">
-            <h3>RAG Chatbot Program Design</h3>
+          <article class="service-card" id="service-rag-program-design">
+            <div class="heading-row">
+              <h3>RAG Chatbot Program Design</h3>
+              <a class="anchor-link" href="#service-rag-program-design" aria-label="Link to RAG Chatbot Program Design"></a>
+            </div>
             <p>Stand up self-service or managed RAG programs grounded in approved documents and real enterprise knowledge. A working chatbot demo is not an AI program. The program is the boring scaffolding around the chatbot. I help you build that.</p>
           </article>
 
-          <article class="service-card">
-            <h3>AI Software &amp; Vendor Review</h3>
+          <article class="service-card" id="service-ai-vendor-review">
+            <div class="heading-row">
+              <h3>AI Software &amp; Vendor Review</h3>
+              <a class="anchor-link" href="#service-ai-vendor-review" aria-label="Link to AI Software and Vendor Review"></a>
+            </div>
             <p>Help review AI-enabled tools with a real eye on data controls, model training claims, retention, residency, logging, privacy, security posture, and operational risk. Know what you're actually signing up for before you approve it.</p>
           </article>
 
-          <article class="service-card">
-            <h3>Executive &amp; Workforce AI Upskilling</h3>
-            <p>Approachable, technically honest training on AI fundamentals, ML, LLMs, transformers, RAG, governance, and how to actually develop a use case. Built for real human beings — execs, analysts, program folks — not just engineers.</p>
+          <article class="service-card" id="service-ai-upskilling">
+            <div class="heading-row">
+              <h3>Executive &amp; Workforce AI Upskilling</h3>
+              <a class="anchor-link" href="#service-ai-upskilling" aria-label="Link to Executive and Workforce AI Upskilling"></a>
+            </div>
+            <p>Approachable, technically honest training on AI fundamentals, ML, LLMs, transformers, RAG, governance, and how to actually develop a use case. Built for real human beings (execs, analysts, program folks), not just engineers.</p>
           </article>
 
-          <article class="service-card">
-            <h3>Technical Product Advisory</h3>
+          <article class="service-card" id="service-technical-product-advisory">
+            <div class="heading-row">
+              <h3>Technical Product Advisory</h3>
+              <a class="anchor-link" href="#service-technical-product-advisory" aria-label="Link to Technical Product Advisory"></a>
+            </div>
             <p>Help bridge execs, engineers, security teams, data teams, and the people who just want the thing to work. Someone has to translate between all those rooms so AI services turn into actual products. I've spent years being that someone.</p>
           </article>
 
@@ -338,30 +400,115 @@
     <section class="section approach" id="approach" aria-labelledby="approach-heading">
       <div class="container">
         <div class="section-intro">
-          <h2 id="approach-heading">Practical, technical, and built for actual institutional reality.</h2>
+          <div class="heading-row">
+            <h2 id="approach-heading">Practical, technical, and built for actual institutional reality.</h2>
+            <a class="anchor-link" href="#approach" aria-label="Link to this section: approach"></a>
+          </div>
           <p>AI enablement isn't picking a model and calling it a day. It's process, architecture, security, data readiness, adoption, cost awareness, leadership trust, feedback loops, and somebody owning the thing in production. I work across all of it.</p>
         </div>
-        <div class="approach-grid">
-          <article class="approach-card">
+        <ol class="approach-grid">
+          <li class="approach-card" id="approach-operating-model">
             <span class="approach-number" aria-hidden="true">01</span>
             <h3>Start with the operating model</h3>
             <p>Before anyone picks tools, figure out how AI services are going to be owned, funded, governed, and kept alive in your organization. Strategy without an operating model is just a nicely formatted PDF nobody follows.</p>
-          </article>
-          <article class="approach-card">
+          </li>
+          <li class="approach-card" id="approach-usable-governance">
             <span class="approach-number" aria-hidden="true">02</span>
             <h3>Make governance usable</h3>
             <p>Good governance should make safe progress easier, not turn every project into a hostage negotiation. I help design review and approval flows that protect the org without freezing every initiative on the runway.</p>
-          </article>
-          <article class="approach-card">
+          </li>
+          <li class="approach-card" id="approach-access-patterns">
             <span class="approach-number" aria-hidden="true">03</span>
             <h3>Build access patterns people can actually use</h3>
             <p>If getting access to an LLM takes six months and three committees, your people will find a workaround. (They already have.) I help create access patterns that are secure, governed, and fast enough to not get bypassed.</p>
-          </article>
-          <article class="approach-card">
+          </li>
+          <li class="approach-card" id="approach-demo-to-production">
             <span class="approach-number" aria-hidden="true">04</span>
             <h3>Move from demos to actually-in-production</h3>
             <p>Demos are easy. Production is where enablement gets real. I care about the boring stuff: deployment, monitoring, cost tracking, performance, and the very specific human who gets paged when something breaks.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Toolbox -->
+    <section class="section toolbox" id="toolbox" aria-labelledby="toolbox-heading">
+      <div class="container">
+        <div class="section-intro">
+          <div class="heading-row">
+            <h2 id="toolbox-heading">Under the hood: the technical bits I actually care about.</h2>
+            <a class="anchor-link" href="#toolbox" aria-label="Link to this section: technical toolbox"></a>
+          </div>
+          <p>Strategy talk is cheap, and frankly a little suspicious if nobody in the room can explain what a vector embedding is or why the token bill quietly tripled over a long weekend. So here's a peek inside the toolbox: the nuts, bolts, and occasionally rusty wrenches I reach for when an AI program has to survive honest contact with real users, real data, and a very real security team.</p>
+        </div>
+        <div class="toolbox-grid">
+
+          <article class="tool-card" id="toolbox-rag">
+            <div class="heading-row">
+              <h3>RAG that holds up after the demo</h3>
+              <a class="anchor-link" href="#toolbox-rag" aria-label="Link to RAG that holds up after the demo"></a>
+            </div>
+            <p>A RAG demo is a lot like a model home: gorgeous, beautifully staged, and nobody actually lives there. The real thing needs plumbing. Sensible chunking (with overlap, so ideas don't get guillotined mid-sentence), the right embedding model, hybrid search that blends good old keyword matching with vector similarity, re-ranking, metadata filters that quietly respect document-level permissions, citations people can click and verify, and an evaluation set that measures groundedness, so "it seems fine" finally stops being the quality bar.</p>
+            <ul class="tag-list" aria-label="Topics">
+              <li>Chunking &amp; embeddings</li><li>Hybrid search</li><li>Re-ranking</li><li>Permission-aware retrieval</li><li>Groundedness evals</li>
+            </ul>
           </article>
+
+          <article class="tool-card" id="toolbox-gateway">
+            <div class="heading-row">
+              <h3>LLM gateways and access patterns</h3>
+              <a class="anchor-link" href="#toolbox-gateway" aria-label="Link to LLM gateways and access patterns"></a>
+            </div>
+            <p>Think of a model gateway as the front desk of a wildly popular hotel: everybody's welcome, but everybody checks in first. That means a central API gateway sitting in front of providers like Amazon Bedrock, least-privilege IAM roles, per-team keys and quotas, an approved-model allow-list, token metering for showback or chargeback, rate limits, logging that's thoughtful enough not to accidentally hoard sensitive prompts, and guardrails on the way in and on the way out.</p>
+            <ul class="tag-list" aria-label="Topics">
+              <li>API gateways</li><li>IAM &amp; least privilege</li><li>Amazon Bedrock</li><li>Token metering</li><li>Guardrails</li>
+            </ul>
+          </article>
+
+          <article class="tool-card" id="toolbox-governance">
+            <div class="heading-row">
+              <h3>Governance with a fast lane</h3>
+              <a class="anchor-link" href="#toolbox-governance" aria-label="Link to Governance with a fast lane"></a>
+            </div>
+            <p>Good governance works like airport security with a PreCheck lane: everybody gets screened, but not everybody has to take their shoes off. Risk-tiered intake, data classification baked into the decision instead of awkwardly bolted on afterward, genuine human review where the stakes are genuinely high, frameworks like the NIST AI RMF used as a map rather than a cudgel, and a clearly documented path from "idea" to "approved" to, eventually and gracefully, "retired."</p>
+            <ul class="tag-list" aria-label="Topics">
+              <li>Risk-tiered intake</li><li>Data classification</li><li>NIST AI RMF</li><li>Human-in-the-loop</li><li>Lifecycle management</li>
+            </ul>
+          </article>
+
+          <article class="tool-card" id="toolbox-vendor-review">
+            <div class="heading-row">
+              <h3>Reading the fine print on AI vendors</h3>
+              <a class="anchor-link" href="#toolbox-vendor-review" aria-label="Link to Reading the fine print on AI vendors"></a>
+            </div>
+            <p>Every AI tool swears it's secure, the same way every used car was only ever driven to church on Sundays. So I ask the politely annoying questions. Is our data used to train their models, and is that promise in the contract or just on the marketing page? How long are prompts retained, and is zero-data-retention on the menu? Where does the data live, which subprocessors touch it, is there SSO and audit logging, and, for public-sector folks, what's the FedRAMP story?</p>
+            <ul class="tag-list" aria-label="Topics">
+              <li>Training-data claims</li><li>Retention &amp; residency</li><li>Subprocessors</li><li>SSO &amp; audit logs</li><li>FedRAMP</li>
+            </ul>
+          </article>
+
+          <article class="tool-card" id="toolbox-fundamentals">
+            <div class="heading-row">
+              <h3>Fundamentals, explained like a human</h3>
+              <a class="anchor-link" href="#toolbox-fundamentals" aria-label="Link to Fundamentals, explained like a human"></a>
+            </div>
+            <p>I genuinely, nerdily love explaining how this stuff works. Supervised versus unsupervised learning. What a transformer's attention mechanism is really doing. Why a bidirectional encoder like BERT reads a sentence so differently from a GPT-style model that writes one token at a time. What tokens and context windows actually cost, how embeddings turn meaning into geometry, and why models hallucinate with such breathtaking, unearned confidence.</p>
+            <ul class="tag-list" aria-label="Topics">
+              <li>Machine learning</li><li>Transformers &amp; attention</li><li>Embeddings</li><li>Tokens &amp; context windows</li><li>Hallucination</li>
+            </ul>
+          </article>
+
+          <article class="tool-card" id="toolbox-agents">
+            <div class="heading-row">
+              <h3>Agents and AI-assisted building</h3>
+              <a class="anchor-link" href="#toolbox-agents" aria-label="Link to Agents and AI-assisted building"></a>
+            </div>
+            <p>I don't just talk about AI coding tools, I build with them, <a href="#built-with-ai">this very site included</a>. Agentic workflows are wonderfully powerful and mildly terrifying in roughly equal measure, a bit like handing a brilliant, heavily caffeinated intern the keys to production. So I think hard about tool use, the Model Context Protocol, permission boundaries, human approval steps, and exactly how much autonomy any piece of software should earn before it gets anywhere near the big red button.</p>
+            <ul class="tag-list" aria-label="Topics">
+              <li>Agentic workflows</li><li>Tool use &amp; MCP</li><li>Permission boundaries</li><li>Claude Code</li>
+            </ul>
+          </article>
+
         </div>
       </div>
     </section>
@@ -370,8 +517,11 @@
     <section class="section experience" id="experience" aria-labelledby="experience-heading">
       <div class="container">
         <div class="section-intro">
-          <h2 id="experience-heading">Built from being close to the actual work.</h2>
-          <p>I've spent the last few years doing this inside a massive, heavily regulated federal environment. Not as a vendor staring at it from the outside — as someone on the inside helping stand up AI services from scratch, with all the calendar invites and security reviews that come with it.</p>
+          <div class="heading-row">
+            <h2 id="experience-heading">Built from being close to the actual work.</h2>
+            <a class="anchor-link" href="#experience" aria-label="Link to this section: experience"></a>
+          </div>
+          <p>I've spent the last few years doing this inside a massive, heavily regulated federal environment. Not as a vendor staring at it from the outside, but as someone on the inside helping stand up AI services from scratch, with all the calendar invites and security reviews that come with it.</p>
         </div>
         <ul class="experience-list">
           <li>Helped lead AI enablement work in a heavily regulated public-sector environment serving tens of thousands of users.</li>
@@ -380,7 +530,7 @@
           <li>Helped build enterprise pathways for cloud AI services, including AWS Bedrock integration.</li>
           <li>Helped get a self-service RAG chatbot program off the ground.</li>
           <li>Personally reviewed AI-enabled software requests for data-control, privacy, security, and governance concerns.</li>
-          <li>Delivered AI and machine learning training to broad enterprise audiences — technical, non-technical, and everyone in between.</li>
+          <li>Delivered AI and machine learning training to broad enterprise audiences: technical, non-technical, and everyone in between.</li>
           <li>Supported integration with a government AI platform.</li>
           <li>Earlier life: software development, web development, BI, analytics enablement, product ownership, and enterprise platforms.</li>
           <li>Completed Cornell machine learning certification training, mostly so I could prove I wasn't just making it up.</li>
@@ -393,8 +543,11 @@
       <div class="container">
         <article class="article-card">
           <div class="article-label">Field Note</div>
-          <h2 id="article-heading">Field notes from standing up enterprise AI services.</h2>
-          <p>I wrote about the gap between reading enterprise AI advice and actually doing this stuff inside a large, regulated organization. The playbooks tend to leave out the parts that are actually hard — getting access approved, building trust with security teams, explaining cost models to leadership without putting them to sleep, and helping thousands of regular humans figure out what AI can (and definitely can't) do for their day job.</p>
+          <div class="heading-row">
+            <h2 id="article-heading">Field notes from standing up enterprise AI services.</h2>
+            <a class="anchor-link" href="#article" aria-label="Link to this section: field note"></a>
+          </div>
+          <p>I wrote about the gap between reading enterprise AI advice and actually doing this stuff inside a large, regulated organization. The playbooks tend to leave out the parts that are actually hard: getting access approved, building trust with security teams, explaining cost models to leadership without putting them to sleep, and helping thousands of regular humans figure out what AI can (and definitely can't) do for their day job.</p>
           <a href="https://medium.com/@bogoodski/we-didnt-know-what-we-didn-t-know-standing-up-enterprise-ai-services-at-scale-cf2fd7f169c8" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Read: We Didn't Know What We Didn't Know</a>
         </article>
       </div>
@@ -403,26 +556,105 @@
     <!-- Who This Is For -->
     <section class="section who-for" id="who-for" aria-labelledby="who-heading">
       <div class="container">
-        <h2 id="who-heading">Who this is for</h2>
-        <div class="who-grid">
-          <div class="who-card">
-            <p>Senior leaders who need an AI plan that can actually survive governance review, budget scrutiny, and security with their dignity intact.</p>
+        <div class="heading-row">
+          <h2 id="who-heading">Who this is for</h2>
+          <a class="anchor-link" href="#who-for" aria-label="Link to this section: who this is for"></a>
+        </div>
+        <ul class="who-grid">
+          <li class="who-card">Senior leaders who need an AI plan that can actually survive governance review, budget scrutiny, and security with their dignity intact.</li>
+          <li class="who-card">Public-sector and regulated-enterprise teams trying to move past pilots into something that lives in production.</li>
+          <li class="who-card">Data and technology leaders quietly building internal AI services and wondering if anyone else has done this before. (Yes. Sort of. Let's talk.)</li>
+          <li class="who-card">Organizations evaluating AI-enabled software who would really like to understand what they're actually buying.</li>
+          <li class="who-card">Teams trying to build RAG chatbot programs that are grounded, governed, and (bonus points) actually useful.</li>
+          <li class="who-card">Leaders who need staff training that's technically honest, practically relevant, and won't make non-engineers feel dumb.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq" id="faq" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="section-intro">
+          <div class="heading-row">
+            <h2 id="faq-heading">Questions people (and their AI assistants) ask me</h2>
+            <a class="anchor-link" href="#faq" aria-label="Link to this section: frequently asked questions"></a>
           </div>
-          <div class="who-card">
-            <p>Public-sector and regulated-enterprise teams trying to move past pilots into something that lives in production.</p>
-          </div>
-          <div class="who-card">
-            <p>Data and technology leaders quietly building internal AI services and wondering if anyone else has done this before. (Yes. Sort of. Let's talk.)</p>
-          </div>
-          <div class="who-card">
-            <p>Organizations evaluating AI-enabled software who would really like to understand what they're actually buying.</p>
-          </div>
-          <div class="who-card">
-            <p>Teams trying to build RAG chatbot programs that are grounded, governed, and — bonus points — actually useful.</p>
-          </div>
-          <div class="who-card">
-            <p>Leaders who need staff training that's technically honest, practically relevant, and won't make non-engineers feel dumb.</p>
-          </div>
+          <p>The short, plain-English answers to the questions that come up again and again: in meetings, in hallway conversations, and, increasingly, in prompts typed into a chatbot at 11 p.m. by somebody with a deadline and a slightly panicked look in their eyes.</p>
+        </div>
+        <div class="faq-list">
+
+          <article class="faq-item" id="faq-what-is-enterprise-ai-enablement">
+            <div class="heading-row">
+              <h3>What is enterprise AI enablement?</h3>
+              <a class="anchor-link" href="#faq-what-is-enterprise-ai-enablement" aria-label="Link to this question"></a>
+            </div>
+            <p>Enterprise AI enablement is the work of helping large organizations adopt AI safely, usefully, and at scale. It covers the operating model, governed access to large language models, use-case intake and lifecycle, RAG programs, AI software review, cost visibility, and workforce training. Picking a model is maybe ten percent of it. The other ninety percent is making sure the thing is secure, owned, funded, understood, and still running six months after the launch party.</p>
+          </article>
+
+          <article class="faq-item" id="faq-why-ai-pilots-fail">
+            <div class="heading-row">
+              <h3>Why do so many enterprise AI pilots never make it to production?</h3>
+              <a class="anchor-link" href="#faq-why-ai-pilots-fail" aria-label="Link to this question"></a>
+            </div>
+            <p>Most AI pilots stall because of everything around the model, not the model itself. Common culprits include unanswered security and data questions, governance reviews that act like bottlenecks, no clear owner for the service or the bill, and no plan for monitoring and support once real users arrive. A pilot proves something can work. Production proves somebody is willing to be responsible for it.</p>
+          </article>
+
+          <article class="faq-item" id="faq-rag-program">
+            <div class="heading-row">
+              <h3>What does a RAG chatbot program need beyond the chatbot itself?</h3>
+              <a class="anchor-link" href="#faq-rag-program" aria-label="Link to this question"></a>
+            </div>
+            <p>A RAG (retrieval-augmented generation) program needs a governed document ingestion pipeline, sensible chunking and embedding choices, permission-aware retrieval, citations users can verify, evaluation for groundedness and answer quality, cost tracking, and a clear support and ownership model. The chatbot is the storefront. The program is the warehouse, the supply chain, and the people who restock the shelves.</p>
+          </article>
+
+          <article class="faq-item" id="faq-llm-access-governance">
+            <div class="heading-row">
+              <h3>How should an organization govern access to large language models?</h3>
+              <a class="anchor-link" href="#faq-llm-access-governance" aria-label="Link to this question"></a>
+            </div>
+            <p>A practical pattern is a central API gateway in front of approved model providers, with least-privilege IAM roles, per-team credentials and quotas, an approved-model allow-list, token metering for cost visibility, logging, and input and output guardrails. The goal is access that is safe enough for the security team and fast enough that employees don't go hunting for unsanctioned workarounds.</p>
+          </article>
+
+          <article class="faq-item" id="faq-ai-software-review">
+            <div class="heading-row">
+              <h3>What should you check before approving an AI-enabled software tool?</h3>
+              <a class="anchor-link" href="#faq-ai-software-review" aria-label="Link to this question"></a>
+            </div>
+            <p>Before approving an AI tool, confirm whether your data is used to train the vendor's models (and whether that's guaranteed in the contract), how long prompts and outputs are retained, where data is stored and processed, which subprocessors are involved, whether SSO and audit logging are supported, and how the vendor handles security incidents. For public-sector buyers, authorization status such as FedRAMP matters too.</p>
+          </article>
+
+          <article class="faq-item" id="faq-who-steve-works-with">
+            <div class="heading-row">
+              <h3>Who does Steve Bogucki work with?</h3>
+              <a class="anchor-link" href="#faq-who-steve-works-with" aria-label="Link to this question"></a>
+            </div>
+            <p>Steve works with senior executives, CIOs, CTOs, CDOs, AI program leaders, public-sector technology leaders, regulated-enterprise teams, product owners, and data and analytics leaders. Basically, anyone trying to move AI from interesting to operational inside a complex, governed organization. He's also happy to talk with organizations that are building out their own internal AI teams.</p>
+          </article>
+
+          <article class="faq-item" id="faq-ai-training">
+            <div class="heading-row">
+              <h3>Can Steve train executives and non-technical staff on AI?</h3>
+              <a class="anchor-link" href="#faq-ai-training" aria-label="Link to this question"></a>
+            </div>
+            <p>Yes. Steve has delivered AI and machine learning training to broad enterprise audiences, covering supervised and unsupervised learning, transformers, bidirectional context, large language models, RAG, governance, and practical use-case development. The training is technically accurate but approachable, built so that non-engineers walk away more confident rather than more confused.</p>
+          </article>
+
+          <article class="faq-item" id="faq-affiliation">
+            <div class="heading-row">
+              <h3>Does BOGOODSKI.dev represent a government agency or employer?</h3>
+              <a class="anchor-link" href="#faq-affiliation" aria-label="Link to this question"></a>
+            </div>
+            <p>No. BOGOODSKI.dev is an independent professional site by Steve Bogucki. The views and services described here are personal and do not represent or imply endorsement by any employer, government agency, or affiliated organization.</p>
+          </article>
+
+          <article class="faq-item" id="faq-built-with-ai">
+            <div class="heading-row">
+              <h3>Was this website built with AI?</h3>
+              <a class="anchor-link" href="#faq-built-with-ai" aria-label="Link to this question"></a>
+            </div>
+            <p>Yes, openly and on purpose. The site was designed and coded with Claude Code, Anthropic's agentic coding tool, and the copy was drafted with AI help and then edited by Steve until it sounded like him. The headshot is a real photo with a moderate AI touch-up, and the logo and social image were generated with ChatGPT. Every claim on the page is Steve's to stand behind.</p>
+          </article>
+
         </div>
       </div>
     </section>
@@ -431,11 +663,55 @@
     <section class="section about" id="about" aria-labelledby="about-heading">
       <div class="container about-inner">
         <div class="about-content">
-          <h2 id="about-heading">About Steve</h2>
-          <p>I'm a technologist, product person, and AI enablement practitioner. Before AI ate my calendar, I spent years in web development, analytics, BI, data platforms, and enterprise software delivery — basically, building and shipping things inside organizations where shipping anything is mildly miraculous.</p>
+          <div class="heading-row">
+            <h2 id="about-heading">About Steve</h2>
+            <a class="anchor-link" href="#about" aria-label="Link to this section: about Steve"></a>
+          </div>
+          <p>I'm a technologist, product person, and AI enablement practitioner. Before AI ate my calendar, I spent years in web development, analytics, BI, data platforms, and enterprise software delivery. Basically, building and shipping things inside organizations where shipping anything is mildly miraculous.</p>
           <p>I'm comfortable in a room with executives, engineers, governance boards, security reviewers, and people who have never written a line of code in their lives. That's the actual job. AI enablement touches every one of those rooms, and somebody has to translate.</p>
           <p>I'm not a typical consultant. I'm one person. A little goofy. Pretty informal. I get bureaucracy without loving it, and I'd rather help you make something real than hand you a beautiful strategy deck and vanish. I'm not going to pretend the hard parts are easy. I'm here for the hard parts.</p>
+          <p class="name-note">Oh, and about the name, since it tends to raise an eyebrow or two: BOGOODSKI is simply the phonetic pronunciation of my last name, Bogucki (bo-GOOD-ski), and it's the name I brand with across every corner of my life, from my running and DJ profiles to my developer accounts. Same guy, same enthusiasm, just a different playlist depending on the day.</p>
         </div>
+      </div>
+    </section>
+
+    <!-- Built with AI -->
+    <section class="section built-with-ai" id="built-with-ai" aria-labelledby="built-heading">
+      <div class="container built-inner">
+        <div class="heading-row">
+          <h2 id="built-heading">Full disclosure: an AI helped build this site.</h2>
+          <a class="anchor-link" href="#built-with-ai" aria-label="Link to this section: how this site was built with AI"></a>
+        </div>
+        <p>It would be a little ridiculous, like a personal trainer who sneakily takes the elevator, for me to make a living advising organizations on AI adoption and then pretend I lovingly hand-carved every line of this website by candlelight. I didn't. This site was designed, coded, and tuned in a long and surprisingly fun back-and-forth with <strong>Claude Code</strong>, Anthropic's agentic coding tool, with me steering, second-guessing, rewriting, and occasionally reining in its boundless enthusiasm.</p>
+        <p>Here's the honest breakdown, no fine print:</p>
+        <dl class="disclosure-list">
+          <div>
+            <dt>Code &amp; structure</dt>
+            <dd>The HTML, CSS, JavaScript, structured data, and security headers were written with Claude Code, then reviewed and approved by me.</dd>
+          </div>
+          <div>
+            <dt>Words</dt>
+            <dd>Drafted with AI help, then edited by me until they sounded like me on a good-coffee day. The experience, opinions, and occasional goofiness are entirely, unapologetically mine.</dd>
+          </div>
+          <div>
+            <dt>Photo</dt>
+            <dd>That's really me. It's a real photo with a moderate AI touch-up. Think better lighting, not a new face.</dd>
+          </div>
+          <div>
+            <dt>Logo &amp; social card</dt>
+            <dd>Generated with ChatGPT's image tools.</dd>
+          </div>
+        </dl>
+        <h3 class="built-subheading">What's under the hood (because I honestly can't help myself)</h3>
+        <ul class="built-list">
+          <li>Plain, carefully tuned HTML, CSS, and a light sprinkle of vanilla JavaScript. No framework, no build step, no trackers, no cookies, no third-party requests.</li>
+          <li>A strict Content Security Policy, HSTS, and locked-down permissions headers, because practicing what I preach includes the boring security parts.</li>
+          <li>A self-hosted variable font and right-sized WebP images, so the page loads briskly even on a phone clinging to one bar of signal.</li>
+          <li>Schema.org structured data that wires me, my services, and the FAQ above into a tidy little knowledge graph.</li>
+          <li>An <a href="/llms.txt">llms.txt</a> and <a href="/llms-full.txt">llms-full.txt</a>, plus a robots.txt that rolls out the welcome mat for AI crawlers, so AI assistants can read this site as easily as people can.</li>
+          <li>Every section, service, and question is deep-linkable. Hover over (or tab to) any heading and grab its link.</li>
+        </ul>
+        <p>Using AI didn't replace the judgment. It just made the typing go a whole lot faster. Which, honestly, is the entire pitch.</p>
       </div>
     </section>
 
@@ -443,10 +719,10 @@
     <section class="section contact" id="contact" aria-labelledby="contact-heading">
       <div class="container contact-inner">
         <h2 id="contact-heading">Trying to move AI from "curiosity" to "actually working"?</h2>
-        <p class="contact-text">If you're somewhere in the messy space between "we should probably do AI" and "we have it governed, secure, and in production," let's talk. Advisory, consulting, executive education, enablement strategy, technical product guidance — or just a friendly second opinion.</p>
+        <p class="contact-text">If you're somewhere in the messy space between "we should probably do AI" and "we have it governed, secure, and in production," let's talk. Advisory, consulting, executive education, enablement strategy, technical product guidance, or just a friendly second opinion. And if you're building out an AI team and looking for someone who's done this from the inside, I'm always up for that conversation too.</p>
         <div class="contact-ctas">
           <a href="mailto:stevebogucki12@gmail.com?subject=BOGOODSKI.dev:%20Consulting%20Request" class="btn btn-primary">Email Steve</a>
-          <a href="https://www.linkedin.com/in/sbogucki12/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
+          <a href="https://www.linkedin.com/in/sbogucki12/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer me">Connect on LinkedIn</a>
         </div>
       </div>
     </section>
@@ -454,20 +730,37 @@
   </main>
 
   <!-- Footer -->
-  <footer class="site-footer" role="contentinfo">
+  <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
         <span class="logo-name">BOGOODSKI</span><span class="logo-dot">.dev</span>
         <p class="footer-tagline">Enterprise AI, but human-sized. By Steve Bogucki.</p>
       </div>
+      <nav class="footer-nav" aria-label="On this page">
+        <ul>
+          <li><a href="#problem">The problem</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#approach">Approach</a></li>
+          <li><a href="#toolbox">Toolbox</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#article">Field note</a></li>
+          <li><a href="#who-for">Who it's for</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#built-with-ai">Built with AI</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
       <div class="footer-links">
         <a href="mailto:stevebogucki12@gmail.com">stevebogucki12@gmail.com</a>
-        <a href="https://www.linkedin.com/in/sbogucki12/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/sbogucki12/" target="_blank" rel="noopener noreferrer me">LinkedIn</a>
+        <a href="https://medium.com/@bogoodski" target="_blank" rel="noopener noreferrer me">Medium</a>
       </div>
+      <p class="footer-meta">Last updated <time datetime="2026-11-06">November 6, 2026</time>. Built with Claude Code. <a href="#built-with-ai">Here's how.</a></p>
       <p class="footer-disclaimer">BOGOODSKI.dev is an independent professional site by Steve Bogucki. The views and services described here are personal and do not represent or imply endorsement by any employer, government agency, or affiliated organization.</p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="/script.js" defer></script>
 </body>
 </html>

@@ -1,37 +1,45 @@
 # BOGOODSKI.dev
 
-## Site
-- Name: BOGOODSKI.dev
-- URL: https://bogoodski.dev
-- Purpose: Personal consulting and advisory site for enterprise AI enablement services.
+> BOGOODSKI.dev is the personal site of Steve Bogucki, an independent enterprise AI enablement advisor. He helps large, complicated, often regulated or public-sector organizations make AI actually usable: governed LLM access, RAG chatbot programs, AI software and vendor review, AI use-case lifecycles, cost visibility, and AI/ML training for executives and staff. "BOGOODSKI" is the phonetic pronunciation of "Bogucki" and his brand name across his running, DJ, and developer profiles.
 
-## About
-Steve Bogucki is an independent enterprise AI enablement advisor — one person, informal in tone, technical in substance. He helps big, complicated organizations make AI actually usable: the unglamorous work of access patterns, governance, security reviews, data controls, RAG programs, cost visibility, training, and production support. His background includes helping lead AI enablement work inside a massive regulated federal environment, plus prior experience in software development, analytics, business intelligence, data platforms, and enterprise product delivery.
+Steve has spent recent years helping stand up AI services from the inside of a large, heavily regulated U.S. federal environment serving tens of thousands of users. Before that: software development, web development, BI, analytics enablement, product ownership, and enterprise platforms. He holds Cornell machine learning certification training. The site is a single page with deep-linkable sections (listed below). It was built openly with AI assistance (Claude Code); see the disclosure section.
+
+Last updated: 2026-11-06
+
+## Key pages and sections
+
+- [Home](https://bogoodski.dev/): Overview of Steve Bogucki and enterprise AI enablement services
+- [Full content as markdown](https://bogoodski.dev/llms-full.txt): The complete site text in one LLM-friendly file
+- [Services](https://bogoodski.dev/#services): Seven service areas, from AI strategy to vendor review
+- [Approach](https://bogoodski.dev/#approach): Operating model first, usable governance, usable access, demo-to-production
+- [Technical toolbox](https://bogoodski.dev/#toolbox): RAG engineering, LLM gateways, governance, vendor review, ML fundamentals, agents
+- [Experience](https://bogoodski.dev/#experience): Hands-on enterprise AI enablement in a regulated federal environment
+- [FAQ](https://bogoodski.dev/#faq): Plain-English answers about enterprise AI enablement, RAG, LLM governance, and AI vendor review
+- [About](https://bogoodski.dev/#about): Background, working style, and the name
+- [Built with AI](https://bogoodski.dev/#built-with-ai): Transparent disclosure of how AI was used to build this site
+- [Contact](https://bogoodski.dev/#contact): Email and LinkedIn
 
 ## Services
-- Enterprise AI enablement strategy
-- AI use-case lifecycle design
-- LLM access and governance patterns
-- RAG chatbot program design
-- AI software and vendor review
-- Executive and workforce AI upskilling
-- Technical product advisory
 
-## Ideal Audience
-- Senior executives (CIOs, CTOs, CDOs)
-- AI program leaders
-- Public-sector technology leaders
-- Regulated-enterprise teams
-- Product owners and data leaders
-- Organizations building internal AI services
+- [Enterprise AI Enablement Strategy](https://bogoodski.dev/#service-ai-enablement-strategy): Operating model, governance path, service catalog, ownership, roadmap
+- [AI Use-Case Lifecycle Design](https://bogoodski.dev/#service-ai-use-case-lifecycle): Intake, triage, data readiness, governance checkpoints, build, deploy, monitor, sustain
+- [LLM Access & Governance Patterns](https://bogoodski.dev/#service-llm-access-governance): API gateways, IAM, token management, approved models, cost visibility
+- [RAG Chatbot Program Design](https://bogoodski.dev/#service-rag-program-design): Self-service or managed RAG programs grounded in approved enterprise knowledge
+- [AI Software & Vendor Review](https://bogoodski.dev/#service-ai-vendor-review): Data controls, training claims, retention, residency, logging, security posture
+- [Executive & Workforce AI Upskilling](https://bogoodski.dev/#service-ai-upskilling): Technically honest, approachable AI/ML training
+- [Technical Product Advisory](https://bogoodski.dev/#service-technical-product-advisory): Translating between executives, engineers, security, and data teams
+
+## Writing
+
+- [We Didn't Know What We Didn't Know: Standing Up Enterprise AI Services at Scale](https://medium.com/@bogoodski/we-didnt-know-what-we-didn-t-know-standing-up-enterprise-ai-services-at-scale-cf2fd7f169c8): Field notes on the gap between enterprise AI advice and doing the work inside a large regulated organization
 
 ## Contact
-- Email: stevebogucki12@gmail.com
-- LinkedIn: https://www.linkedin.com/in/sbogucki12/
 
-## Thought Leadership
-- Article: "We Didn't Know What We Didn't Know: Standing Up Enterprise AI Services at Scale"
-- URL: https://medium.com/@bogoodski/we-didnt-know-what-we-didn-t-know-standing-up-enterprise-ai-services-at-scale-cf2fd7f169c8
+- [Email](mailto:stevebogucki12@gmail.com): stevebogucki12@gmail.com
+- [LinkedIn](https://www.linkedin.com/in/sbogucki12/)
+- [Medium](https://medium.com/@bogoodski)
 
-## Disclaimer
-BOGOODSKI.dev is an independent professional site by Steve Bogucki. The views and services described here are personal and do not represent or imply endorsement by any employer, government agency, or affiliated organization.
+## Optional
+
+- Audience: senior executives (CIOs, CTOs, CDOs), AI program leaders, public-sector technology leaders, regulated-enterprise teams, product owners, data and analytics leaders, and organizations building internal AI teams.
+- Disclaimer: BOGOODSKI.dev is an independent professional site by Steve Bogucki. The views and services described here are personal and do not represent or imply endorsement by any employer, government agency, or affiliated organization.

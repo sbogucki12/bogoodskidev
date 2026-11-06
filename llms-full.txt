@@ -1,0 +1,206 @@
+# Steve Bogucki | BOGOODSKI.dev: Enterprise AI enablement, but make it actually work
+
+> Full text of https://bogoodski.dev/ as markdown, for AI assistants and LLMs. Each heading notes its deep link. Last updated: 2026-11-06.
+
+Canonical URL: https://bogoodski.dev/
+Author: Steve Bogucki (brand name: BOGOODSKI)
+Contact: stevebogucki12@gmail.com · https://www.linkedin.com/in/sbogucki12/ · https://medium.com/@bogoodski
+
+---
+
+## Helping big, complicated organizations make AI actually usable.
+
+Not "look, we made a chatbot" usable. I mean the less glamorous stuff that decides whether AI survives outside a demo: access patterns, governance, security reviews, data controls, RAG programs, cost visibility, training, production support, and all the weird organizational plumbing nobody puts in the keynote deck.
+
+One person. A little goofy. Pretty informal. Occasionally useful in meetings.
+
+## Most organizations don't have an AI problem. They have an everything-around-AI problem.
+Link: https://bogoodski.dev/#problem
+
+Everyone knows AI matters. The pressure is real, the slides are flashy, the budgets are getting approved. But actually operationalizing this stuff inside a big, complicated organization is a totally different sport. Here's what tends to happen instead:
+
+- Pilots that crush the demo and then quietly never scale.
+- Security and data questions that nobody can fully answer, so nothing moves.
+- Governance reviews that turn into bottlenecks instead of guardrails.
+- Nobody quite owns AI services, tooling, or the bill.
+- Tool sprawl, because every team quietly bought or built their own thing.
+- Employees are experimenting way faster than policy can keep up with.
+- Leaders can see the potential, they just can't find the path from "interested" to "in production."
+
+None of these are technology failures. They're enablement failures. The model is rarely the hard part. The hard part is everything around it: access, data, cost, policy, security, training, ownership, and the unglamorous job of keeping the thing alive once it's live.
+
+## Stuff I can help with (services)
+Link: https://bogoodski.dev/#services
+
+Advisory, consulting, and roll-up-the-sleeves help across the full spectrum of enterprise AI enablement.
+
+### Enterprise AI Enablement Strategy
+Link: https://bogoodski.dev/#service-ai-enablement-strategy
+
+Help leaders sort out the operating model, governance path, service catalog, who-owns-what, and a roadmap that actually fits your org. Not a glossy deck that quietly dies in a SharePoint folder. A real plan that respects how the place actually works.
+
+### AI Use-Case Lifecycle Design
+Link: https://bogoodski.dev/#service-ai-use-case-lifecycle
+
+Design the whole journey for AI use cases: intake, triage, consulting, data readiness, governance checkpoints, provisioning, build, deployment, monitoring, sustainment. Most orgs skip straight to building. The lifecycle is the thing that makes any of it repeatable.
+
+### LLM Access & Governance Patterns
+Link: https://bogoodski.dev/#service-llm-access-governance
+
+Help shape enterprise access models for LLMs: API gateway concepts, token and access management, approved model pathways, cost visibility, responsible-use controls. The goal is safe access that people can actually use without filing six tickets.
+
+### RAG Chatbot Program Design
+Link: https://bogoodski.dev/#service-rag-program-design
+
+Stand up self-service or managed RAG programs grounded in approved documents and real enterprise knowledge. A working chatbot demo is not an AI program. The program is the boring scaffolding around the chatbot.
+
+### AI Software & Vendor Review
+Link: https://bogoodski.dev/#service-ai-vendor-review
+
+Help review AI-enabled tools with a real eye on data controls, model training claims, retention, residency, logging, privacy, security posture, and operational risk. Know what you're actually signing up for before you approve it.
+
+### Executive & Workforce AI Upskilling
+Link: https://bogoodski.dev/#service-ai-upskilling
+
+Approachable, technically honest training on AI fundamentals, ML, LLMs, transformers, RAG, governance, and how to actually develop a use case. Built for real human beings (execs, analysts, program folks), not just engineers.
+
+### Technical Product Advisory
+Link: https://bogoodski.dev/#service-technical-product-advisory
+
+Help bridge execs, engineers, security teams, data teams, and the people who just want the thing to work. Someone has to translate between all those rooms so AI services turn into actual products.
+
+## Approach: practical, technical, and built for actual institutional reality
+Link: https://bogoodski.dev/#approach
+
+1. **Start with the operating model.** Before anyone picks tools, figure out how AI services are going to be owned, funded, governed, and kept alive. Strategy without an operating model is just a nicely formatted PDF nobody follows.
+2. **Make governance usable.** Good governance should make safe progress easier, not turn every project into a hostage negotiation.
+3. **Build access patterns people can actually use.** If getting access to an LLM takes six months and three committees, your people will find a workaround. (They already have.)
+4. **Move from demos to actually-in-production.** Deployment, monitoring, cost tracking, performance, and the very specific human who gets paged when something breaks.
+
+## Under the hood: the technical bits I actually care about (toolbox)
+Link: https://bogoodski.dev/#toolbox
+
+### RAG that holds up after the demo
+Link: https://bogoodski.dev/#toolbox-rag
+
+A RAG demo is a lot like a model home: gorgeous, beautifully staged, and nobody actually lives there. The real thing needs plumbing. Sensible chunking (with overlap, so ideas don't get guillotined mid-sentence), the right embedding model, hybrid search that blends keyword matching with vector similarity, re-ranking, metadata filters that respect document-level permissions, citations people can click and verify, and an evaluation set that measures groundedness.
+
+Topics: chunking & embeddings, hybrid search, re-ranking, permission-aware retrieval, groundedness evals.
+
+### LLM gateways and access patterns
+Link: https://bogoodski.dev/#toolbox-gateway
+
+Think of a model gateway as the front desk of a wildly popular hotel: everybody's welcome, but everybody checks in first. A central API gateway in front of providers like Amazon Bedrock, least-privilege IAM roles, per-team keys and quotas, an approved-model allow-list, token metering for showback or chargeback, rate limits, careful logging, and guardrails on the way in and on the way out.
+
+Topics: API gateways, IAM & least privilege, Amazon Bedrock, token metering, guardrails.
+
+### Governance with a fast lane
+Link: https://bogoodski.dev/#toolbox-governance
+
+Good governance works like airport security with a PreCheck lane: everybody gets screened, but not everybody has to take their shoes off. Risk-tiered intake, data classification baked into the decision, human review where the stakes are genuinely high, frameworks like the NIST AI RMF used as a map rather than a cudgel, and a documented path from "idea" to "approved" to "retired."
+
+Topics: risk-tiered intake, data classification, NIST AI RMF, human-in-the-loop, lifecycle management.
+
+### Reading the fine print on AI vendors
+Link: https://bogoodski.dev/#toolbox-vendor-review
+
+Is our data used to train their models, and is that promise in the contract or just on the marketing page? How long are prompts retained, and is zero-data-retention available? Where does the data live, which subprocessors touch it, is there SSO and audit logging, and, for public-sector buyers, what's the FedRAMP story?
+
+Topics: training-data claims, retention & residency, subprocessors, SSO & audit logs, FedRAMP.
+
+### Fundamentals, explained like a human
+Link: https://bogoodski.dev/#toolbox-fundamentals
+
+Supervised versus unsupervised learning; what a transformer's attention mechanism is doing; why a bidirectional encoder like BERT reads a sentence differently from a GPT-style model that generates one token at a time; what tokens and context windows cost; how embeddings turn meaning into geometry; and why models hallucinate with such confidence.
+
+### Agents and AI-assisted building
+Link: https://bogoodski.dev/#toolbox-agents
+
+Steve builds with AI coding tools, this site included. Agentic workflows raise real questions about tool use, the Model Context Protocol, permission boundaries, human approval steps, and how much autonomy software should earn before it gets near production.
+
+## Experience: built from being close to the actual work
+Link: https://bogoodski.dev/#experience
+
+Steve has spent the last few years doing this inside a massive, heavily regulated federal environment, as someone on the inside helping stand up AI services from scratch.
+
+- Helped lead AI enablement work in a heavily regulated public-sector environment serving tens of thousands of users.
+- Helped publish a first-generation organizational AI strategy.
+- Helped create governed LLM access patterns using enterprise IAM role structures and API gateways.
+- Helped build enterprise pathways for cloud AI services, including AWS Bedrock integration.
+- Helped get a self-service RAG chatbot program off the ground.
+- Personally reviewed AI-enabled software requests for data-control, privacy, security, and governance concerns.
+- Delivered AI and machine learning training to broad enterprise audiences: technical, non-technical, and everyone in between.
+- Supported integration with a government AI platform.
+- Earlier: software development, web development, BI, analytics enablement, product ownership, and enterprise platforms.
+- Completed Cornell machine learning certification training.
+
+## Field note
+Link: https://bogoodski.dev/#article
+
+"We Didn't Know What We Didn't Know: Standing Up Enterprise AI Services at Scale" (https://medium.com/@bogoodski/we-didnt-know-what-we-didn-t-know-standing-up-enterprise-ai-services-at-scale-cf2fd7f169c8). It covers the gap between reading enterprise AI advice and doing the work inside a large, regulated organization: getting access approved, building trust with security teams, explaining cost models to leadership, and helping thousands of people understand what AI can and can't do for their jobs.
+
+## Who this is for
+Link: https://bogoodski.dev/#who-for
+
+- Senior leaders who need an AI plan that can survive governance review, budget scrutiny, and security.
+- Public-sector and regulated-enterprise teams trying to move past pilots into production.
+- Data and technology leaders building internal AI services.
+- Organizations evaluating AI-enabled software.
+- Teams building RAG chatbot programs that are grounded, governed, and useful.
+- Leaders who need staff training that's technically honest and practically relevant.
+
+## FAQ
+Link: https://bogoodski.dev/#faq
+
+### What is enterprise AI enablement?
+Enterprise AI enablement is the work of helping large organizations adopt AI safely, usefully, and at scale. It covers the operating model, governed access to large language models, use-case intake and lifecycle, RAG programs, AI software review, cost visibility, and workforce training. Picking a model is maybe ten percent of it. The other ninety percent is making sure the thing is secure, owned, funded, understood, and still running six months after the launch party.
+
+### Why do so many enterprise AI pilots never make it to production?
+Most AI pilots stall because of everything around the model, not the model itself. Common culprits include unanswered security and data questions, governance reviews that act like bottlenecks, no clear owner for the service or the bill, and no plan for monitoring and support once real users arrive. A pilot proves something can work. Production proves somebody is willing to be responsible for it.
+
+### What does a RAG chatbot program need beyond the chatbot itself?
+A RAG (retrieval-augmented generation) program needs a governed document ingestion pipeline, sensible chunking and embedding choices, permission-aware retrieval, citations users can verify, evaluation for groundedness and answer quality, cost tracking, and a clear support and ownership model. The chatbot is the storefront. The program is the warehouse, the supply chain, and the people who restock the shelves.
+
+### How should an organization govern access to large language models?
+A practical pattern is a central API gateway in front of approved model providers, with least-privilege IAM roles, per-team credentials and quotas, an approved-model allow-list, token metering for cost visibility, logging, and input and output guardrails. The goal is access that is safe enough for the security team and fast enough that employees don't go hunting for unsanctioned workarounds.
+
+### What should you check before approving an AI-enabled software tool?
+Before approving an AI tool, confirm whether your data is used to train the vendor's models (and whether that's guaranteed in the contract), how long prompts and outputs are retained, where data is stored and processed, which subprocessors are involved, whether SSO and audit logging are supported, and how the vendor handles security incidents. For public-sector buyers, authorization status such as FedRAMP matters too.
+
+### Who does Steve Bogucki work with?
+Steve works with senior executives, CIOs, CTOs, CDOs, AI program leaders, public-sector technology leaders, regulated-enterprise teams, product owners, and data and analytics leaders. Basically, anyone trying to move AI from interesting to operational inside a complex, governed organization. He's also happy to talk with organizations that are building out their own internal AI teams.
+
+### Can Steve train executives and non-technical staff on AI?
+Yes. Steve has delivered AI and machine learning training to broad enterprise audiences, covering supervised and unsupervised learning, transformers, bidirectional context, large language models, RAG, governance, and practical use-case development. The training is technically accurate but approachable, built so that non-engineers walk away more confident rather than more confused.
+
+### Does BOGOODSKI.dev represent a government agency or employer?
+No. BOGOODSKI.dev is an independent professional site by Steve Bogucki. The views and services described here are personal and do not represent or imply endorsement by any employer, government agency, or affiliated organization.
+
+### Was this website built with AI?
+Yes, openly and on purpose. The site was designed and coded with Claude Code, Anthropic's agentic coding tool, and the copy was drafted with AI help and then edited by Steve until it sounded like him. The headshot is a real photo with a moderate AI touch-up, and the logo and social image were generated with ChatGPT. Every claim on the page is Steve's to stand behind.
+
+## About Steve
+Link: https://bogoodski.dev/#about
+
+Technologist, product person, and AI enablement practitioner. Before AI, years in web development, analytics, BI, data platforms, and enterprise software delivery. Comfortable in a room with executives, engineers, governance boards, security reviewers, and non-technical staff, and translating between all of them.
+
+On the name: BOGOODSKI is simply the phonetic pronunciation of his last name, Bogucki (bo-GOOD-ski), and the name he brands with across disciplines, including his running, DJ, and developer profiles.
+
+## Full disclosure: an AI helped build this site
+Link: https://bogoodski.dev/#built-with-ai
+
+- **Code & structure:** HTML, CSS, JavaScript, structured data, and security headers were written with Claude Code (Anthropic), then reviewed and approved by Steve.
+- **Words:** Drafted with AI help, then edited by Steve. The experience and opinions are his.
+- **Photo:** A real photo of Steve with a moderate AI touch-up.
+- **Logo & social card:** Generated with ChatGPT's image tools.
+- **Under the hood:** Static HTML/CSS/vanilla JS with no framework, trackers, cookies, or third-party requests; strict Content Security Policy and HSTS; self-hosted font; right-sized WebP images; schema.org structured data; llms.txt and llms-full.txt; and deep links on every section.
+
+## Contact
+Link: https://bogoodski.dev/#contact
+
+Advisory, consulting, executive education, enablement strategy, technical product guidance, or a friendly second opinion. Also open to conversations with organizations building out AI teams.
+
+- Email: stevebogucki12@gmail.com
+- LinkedIn: https://www.linkedin.com/in/sbogucki12/
+
+Disclaimer: BOGOODSKI.dev is an independent professional site by Steve Bogucki. The views and services described here are personal and do not represent or imply endorsement by any employer, government agency, or affiliated organization.

@@ -9,12 +9,18 @@ Desktop.ini
 *.swp
 *.swo
 
-# Environment
+# Environment / secrets
 .env
-.env.local
+.env.*
+*.pem
+*.key
+
+# Netlify local state
+.netlify/
 
 # Claude Code
 .claude/
 
-# Testing screenshots
-assets/screenshot-for-testing*
+# Screenshots used for design review/testing (never publish)
+assets/screenshot*
+screenshots/
