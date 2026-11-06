@@ -1,0 +1,95 @@
+# BOGOODSKI.dev
+
+The personal site of **Steve Bogucki**: enterprise AI enablement advisory, plus a living example of the practices it talks about (AI-assisted building, security-first defaults, and content designed to be read by people *and* AI assistants).
+
+- **Live:** https://bogoodski.dev (currently forwarding to https://bogoodski.netlify.app; see [Open items](#open-items))
+- **Host:** Netlify, auto-deploying from `main`
+- **Stack:** hand-written static HTML, CSS, and vanilla JS. No framework, no build step, no trackers, no cookies, no third-party requests.
+- **Working notes for future sessions:** [`CLAUDE.md`](CLAUDE.md) (the project manifest: philosophy, conventions, roadmap)
+
+---
+
+## Repository layout
+
+| Path | What it is |
+|---|---|
+| `index.html` | The whole site (single page) plus the JSON-LD structured data graph in `<head>` |
+| `styles.css` | All styling; self-hosted Inter font via `@font-face` |
+| `script.js` | Progressive enhancement only: mobile nav, deep-link copy, active-section highlighting |
+| `llms.txt` | Concise, LLM-friendly site index ([llmstxt.org](https://llmstxt.org) format) |
+| `llms-full.txt` | Entire site content as clean markdown for AI assistants |
+| `robots.txt` | Allows everyone, and explicitly welcomes AI search/assistant crawlers |
+| `sitemap.xml` | Single URL + image sitemap entries |
+| `site.webmanifest`, `favicon.ico`, `assets/icons/` | Favicon / app-icon set |
+| `assets/img/` | Optimized headshot (WebP + JPG, 360/720) and 1200×630 social card |
+| `assets/fonts/` | Inter variable font (latin subset) + its SIL OFL license |
+| `.well-known/security.txt` | Security contact (RFC 9116); **expires 2027-11-01, renew before then** |
+| `netlify.toml` | Security headers, caching, redirects, and 404 rules that hide repo docs from the live site |
+| `CLAUDE.md` | Project manifest / working agreement for future sessions |
+
+## Running locally
+
+No build step. Serve the folder with any static server and open it:
+
+```sh
+python -m http.server 8765
+# then visit http://127.0.0.1:8765/
+```
+
+Note: Netlify headers (CSP, HSTS, etc.) are not applied by a local server. To test the CSP locally, inject it as a `<meta http-equiv="Content-Security-Policy">` tag in a throwaway copy of `index.html`.
+
+## Deploying
+
+Push to `main` → Netlify publishes the repo root (`publish = "."`). Every file in the repo is publicly reachable unless `netlify.toml` blocks it, so **never commit anything you wouldn't put on a billboard.**
+
+---
+
+## Changelog
+
+### 2026-11-06: AI search optimization, AI transparency, security hardening
+
+A full review and overhaul, built with Claude Code.
+
+**AI search (GEO/SEO)**
+- Added a visible **FAQ section** (9 Q&As) whose text exactly matches the `FAQPage` schema. Each answer leads with a crisp, quotable sentence.
+- Rebuilt JSON-LD as one **connected `@graph`**: `WebSite`, `ProfilePage`, `ImageObject`, `Person`, `ProfessionalService` (+7 `Service` offers), `BlogPosting` (Medium field note), `FAQPage`, all linked by `@id`. Includes Cornell ML credential, `alternateName: BOGOODSKI`, `knowsAbout`, and `sameAs` (LinkedIn, Medium, GitHub, Instagram).
+- Removed a duplicated service (AI Governance Advisory ≈ LLM Access Governance).
+- New **"Under the hood" toolbox section** with concrete technical depth: RAG engineering, LLM gateways and IAM, governance, AI vendor review, ML fundamentals, agents/MCP.
+- Rewrote `llms.txt`; added `llms-full.txt`; linked both via `<link rel="alternate">`.
+- `robots.txt` now explicitly allows ~18 AI crawlers (GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot, Google-Extended, etc.).
+- Image sitemap; fuller OpenGraph/Twitter metadata (site name, locale, image size and alt); canonical uses a trailing slash; dropped meta keywords; added `max-image-preview:large` robots directive.
+- One-time explanation of the name: BOGOODSKI is the phonetic pronunciation of Bogucki, used across running, DJ, and developer profiles.
+
+**Linkability (single page, deep-linkable everywhere)**
+- Stable `id`s on every section, service card, toolbox card, approach step, and FAQ question.
+- Hover/focus `#` anchor next to headings; clicking copies the full URL ("Link copied").
+- Footer "On this page" index; `scroll-margin-top` so deep links clear the fixed header; `:target` highlight.
+
+**AI transparency**
+- New **"Full disclosure: an AI helped build this site"** section and matching FAQ: Claude Code for code, AI-assisted copy edited by Steve, real photo with a moderate AI touch-up, ChatGPT-generated logo and social card. (The original images carried C2PA provenance from OpenAI's image service, which confirmed this.)
+
+**Performance & responsive**
+- Images: ~5.3 MB → ~120 KB delivered. Center-cropped headshot as WebP + JPG at 1×/2× via `<picture>`/`srcset`; 1200×630 social card; proper favicon set (`.ico`, 32px, 180px Apple touch, 192/512 manifest).
+- Self-hosted Inter variable font (no Google Fonts request, no render-blocking `@import`).
+- Mobile nav: Escape closes it, body scroll lock, focus return, `100dvh`, closes on resize. Hamburger now at ≤960px (desktop nav was cramped at 861–960px).
+- Grid minimums use `min(100%, …)` so nothing overflows on 320px screens; tighter section padding on phones; `text-wrap: balance` headings.
+- Verified at 320, 375, 414, 768, 900, 930, 1440, and 2560px.
+
+**Security**
+- CSP tightened: no `'unsafe-inline'`, no third-party origins, plus `object-src 'none'`, `base-uri`, `form-action`, `frame-ancestors`, `upgrade-insecure-requests`. Verified in Chrome: external JS runs, injected inline JS is blocked.
+- Added HSTS, COOP, and a broader Permissions-Policy.
+- Fixed header globs (`*.css` → `/*.css`). Image caching is no longer `immutable` for a year on non-hashed filenames.
+- 301s from old asset URLs (`/assets/social.png`, etc.) to the new files, so cached social previews don't break.
+- `security.txt`; `.gitignore` covers screenshots, env files, and keys; README/CLAUDE.md/docs forced to 404 on the live site.
+- Pre-commit sweep: no secrets, private IPs, or local paths; new images carry no EXIF/metadata; no unsafe DOM sinks; all `target="_blank"` links use `noopener`.
+
+### 2026-05: Initial build
+- Initial scaffold, OpenGraph social image, mobile nav fixes, and a personal/informal copy rewrite.
+
+---
+
+## Open items
+
+See the **Roadmap** in [`CLAUDE.md`](CLAUDE.md). The most important one:
+
+> **bogoodski.dev currently 301-redirects to bogoodski.netlify.app** (registrar URL forwarding). That splits identity between two hostnames and undercuts the canonical URL. Fix by adding `bogoodski.dev` as the primary custom domain in Netlify and pointing DNS at Netlify (not URL forwarding).

@@ -60,6 +60,27 @@
   [headers.values]
     Content-Type = "text/plain; charset=utf-8"
 
+# Repo docs live in the publish dir (".") but are for maintainers, not visitors.
+# Force a 404 so they are never served from the website. (They remain visible
+# in the public GitHub repo, so keep them free of anything sensitive.)
+[[redirects]]
+  from = "/README.md"
+  to = "/404"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/CLAUDE.md"
+  to = "/404"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/docs/*"
+  to = "/404"
+  status = 404
+  force = true
+
 # Redirect www to root domain
 [[redirects]]
   from = "https://www.bogoodski.dev/*"
