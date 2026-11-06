@@ -47,7 +47,7 @@
 
   // --- Deep-link anchors: copy the full URL on click -----------------------
   document.addEventListener('click', function (e) {
-    var link = e.target.closest('.anchor-link');
+    var link = e.target.closest('.anchor-link, .faq-permalink');
     if (!link || !navigator.clipboard) return;
     var url = window.location.origin + window.location.pathname + link.getAttribute('href');
     navigator.clipboard.writeText(url).then(function () {
@@ -55,6 +55,20 @@
       setTimeout(function () { link.classList.remove('copied'); }, 1600);
     }, function () { /* clipboard denied; the hash navigation still works */ });
   });
+
+  // --- Deep links into the FAQ accordion open the right answer -------------
+  function openTargetDetails() {
+    var id = decodeURIComponent(window.location.hash.slice(1));
+    if (!id) return;
+    var target = document.getElementById(id);
+    var details = target && target.closest('details');
+    if (details && !details.open) {
+      details.open = true;
+      target.scrollIntoView();
+    }
+  }
+  window.addEventListener('hashchange', openTargetDetails);
+  openTargetDetails();
 
   // --- Active nav state on scroll ----------------------------------------
   var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav-link'));

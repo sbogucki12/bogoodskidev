@@ -53,6 +53,14 @@ Steve's voice: **professional but informal; fun and light; flowing, stream-of-co
 ### New section checklist
 `<section id="…" aria-labelledby="…">` → `.heading-row` with `h2` + `.anchor-link` → add to footer `.footer-nav` → add to `ProfilePage.hasPart` → add to `llms.txt` / `llms-full.txt` → nav only if it's a top-level destination (header nav holds ~6 items max).
 
+### Cache-busting (important)
+`index.html` loads `/styles.css?v=YYYYMMDDx` and `/script.js?v=YYYYMMDDx`. **Bump the `?v=` value whenever you change either file**, or returning visitors may see new HTML with an old stylesheet (this happened once: list numbers and a stacked footer showed up).
+
+### Layout conventions
+- Grids use **explicit breakpoints** chosen so card counts divide evenly (services: 7 cards at 1/2/3 cols with the last spanning the row; approach: 4 cards at 1/2/4; toolbox: 6 cards at 1/2/3 via `auto-fill` 320px). If you add or remove cards, re-check for orphans at 600, 1024, and 1440px.
+- Long content goes in **scannable structures**: short lead line + checklist (toolbox), accordion (FAQ). Avoid paragraphs longer than ~4 lines on desktop.
+- The FAQ uses `<details>`/`<summary>` with the `<h3>` inside `<summary>`. The visible answer's first sentence is wrapped in `<strong>`; the schema text is the same sentence without tags.
+
 ### Images
 - Source images go through re-encoding (Pillow) to strip metadata, at 1×/2× sizes, WebP + JPG fallback, in `assets/img/`.
 - `assets/img/*` and `assets/icons/*` are cached 7 days (not immutable). If you replace an image in place, that's fine; for big changes, prefer a new filename.
@@ -78,7 +86,7 @@ Headless Chrome on Windows enforces a ~500px minimum window width, so a `--windo
 - [ ] Run securityheaders.com and Google Rich Results Test against the live domain; fix anything flagged.
 
 **Soon**
-- [ ] Add Steve's **DJ profile URL** to `Person.sameAs` and the footer (running and GitHub were added 2026-11-06).
+- [ ] Add Steve's **DJ profile URL** to `Person.sameAs`, the footer "Elsewhere" column, and the llms files (running and GitHub were added 2026-11-06; the DJ URL hasn't been provided yet).
 - [ ] Refresh the LinkedIn post-inspector cache for the new social card (`/assets/img/social-card.jpg`).
 - [ ] Renew `.well-known/security.txt` **before 2027-11-01** (update `Expires`).
 
@@ -92,4 +100,4 @@ Headless Chrome on Windows enforces a ~500px minimum window width, so a `--windo
 
 ## 6. Session log
 - **2026-05:** Initial build and copy rewrite.
-- **2026-11-06:** AI-search overhaul, AI transparency section, toolbox section, FAQ, deep links, image/font optimization, responsive fixes, CSP/HSTS hardening, README + this manifest. Branch `ai-search-optimization` merged to `main`. See README changelog for details.
+- **2026-11-06:** AI-search overhaul, AI transparency section, toolbox section, FAQ, deep links, image/font optimization, responsive fixes, CSP/HSTS hardening, README + this manifest. Branch `ai-search-optimization` merged to `main`. Later the same day: readability/layout polish (toolbox checklists, FAQ accordion, footer redesign, orphan-free grids, CSS/JS cache-busting). See README changelog for details.

@@ -47,7 +47,7 @@
   <link rel="alternate" type="text/markdown" href="/llms-full.txt" title="LLM-friendly full site content">
 
   <link rel="preload" href="/assets/fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/styles.css?v=20261106b">
 
   <!-- JSON-LD Structured Data (data block; not executed) -->
   <script type="application/ld+json">
@@ -441,7 +441,8 @@
             <h2 id="toolbox-heading">Under the hood: the technical bits I actually care about.</h2>
             <a class="anchor-link" href="#toolbox" aria-label="Link to this section: technical toolbox"></a>
           </div>
-          <p>Strategy talk is cheap, and frankly a little suspicious if nobody in the room can explain what a vector embedding is or why the token bill quietly tripled over a long weekend. So here's a peek inside the toolbox: the nuts, bolts, and occasionally rusty wrenches I reach for when an AI program has to survive honest contact with real users, real data, and a very real security team.</p>
+          <p>Strategy talk is cheap, and frankly a little suspicious if nobody in the room can explain what a vector embedding is or why the token bill quietly tripled over a long weekend.</p>
+          <p>So here's a peek inside the toolbox: the nuts, bolts, and occasionally rusty wrenches I reach for when an AI program has to survive honest contact with real users, real data, and a very real security team.</p>
         </div>
         <div class="toolbox-grid">
 
@@ -450,9 +451,13 @@
               <h3>RAG that holds up after the demo</h3>
               <a class="anchor-link" href="#toolbox-rag" aria-label="Link to RAG that holds up after the demo"></a>
             </div>
-            <p>A RAG demo is a lot like a model home: gorgeous, beautifully staged, and nobody actually lives there. The real thing needs plumbing. Sensible chunking (with overlap, so ideas don't get guillotined mid-sentence), the right embedding model, hybrid search that blends good old keyword matching with vector similarity, re-ranking, metadata filters that quietly respect document-level permissions, citations people can click and verify, and an evaluation set that measures groundedness, so "it seems fine" finally stops being the quality bar.</p>
-            <ul class="tag-list" aria-label="Topics">
-              <li>Chunking &amp; embeddings</li><li>Hybrid search</li><li>Re-ranking</li><li>Permission-aware retrieval</li><li>Groundedness evals</li>
+            <p class="tool-lead">A RAG demo is a lot like a model home: gorgeous, beautifully staged, and nobody actually lives there. The real thing needs plumbing.</p>
+            <ul class="tool-points">
+              <li>Sensible chunking, with overlap so ideas don't get guillotined mid-sentence</li>
+              <li>The right embedding model, plus hybrid keyword and vector search</li>
+              <li>Re-ranking, so the best passage wins, not just the closest one</li>
+              <li>Permission-aware retrieval that quietly respects who can see what</li>
+              <li>Clickable citations and groundedness evals, so "it seems fine" stops being the quality bar</li>
             </ul>
           </article>
 
@@ -461,9 +466,13 @@
               <h3>LLM gateways and access patterns</h3>
               <a class="anchor-link" href="#toolbox-gateway" aria-label="Link to LLM gateways and access patterns"></a>
             </div>
-            <p>Think of a model gateway as the front desk of a wildly popular hotel: everybody's welcome, but everybody checks in first. That means a central API gateway sitting in front of providers like Amazon Bedrock, least-privilege IAM roles, per-team keys and quotas, an approved-model allow-list, token metering for showback or chargeback, rate limits, logging that's thoughtful enough not to accidentally hoard sensitive prompts, and guardrails on the way in and on the way out.</p>
-            <ul class="tag-list" aria-label="Topics">
-              <li>API gateways</li><li>IAM &amp; least privilege</li><li>Amazon Bedrock</li><li>Token metering</li><li>Guardrails</li>
+            <p class="tool-lead">A model gateway is the front desk of a wildly popular hotel: everybody's welcome, but everybody checks in first.</p>
+            <ul class="tool-points">
+              <li>A central API gateway in front of providers like Amazon Bedrock</li>
+              <li>Least-privilege IAM roles, per-team keys, and quotas</li>
+              <li>An approved-model allow-list</li>
+              <li>Token metering for showback or chargeback, plus rate limits</li>
+              <li>Thoughtful logging, and guardrails on the way in and on the way out</li>
             </ul>
           </article>
 
@@ -472,9 +481,13 @@
               <h3>Governance with a fast lane</h3>
               <a class="anchor-link" href="#toolbox-governance" aria-label="Link to Governance with a fast lane"></a>
             </div>
-            <p>Good governance works like airport security with a PreCheck lane: everybody gets screened, but not everybody has to take their shoes off. Risk-tiered intake, data classification baked into the decision instead of awkwardly bolted on afterward, genuine human review where the stakes are genuinely high, frameworks like the NIST AI RMF used as a map rather than a cudgel, and a clearly documented path from "idea" to "approved" to, eventually and gracefully, "retired."</p>
-            <ul class="tag-list" aria-label="Topics">
-              <li>Risk-tiered intake</li><li>Data classification</li><li>NIST AI RMF</li><li>Human-in-the-loop</li><li>Lifecycle management</li>
+            <p class="tool-lead">Good governance is airport security with a PreCheck lane: everybody gets screened, but not everybody has to take their shoes off.</p>
+            <ul class="tool-points">
+              <li>Risk-tiered intake with a genuine fast lane for low-risk ideas</li>
+              <li>Data classification baked into the decision, not bolted on afterward</li>
+              <li>Human review where the stakes are genuinely high</li>
+              <li>The NIST AI RMF used as a map, not a cudgel</li>
+              <li>A clear path from "idea" to "approved" to, eventually and gracefully, "retired"</li>
             </ul>
           </article>
 
@@ -483,9 +496,13 @@
               <h3>Reading the fine print on AI vendors</h3>
               <a class="anchor-link" href="#toolbox-vendor-review" aria-label="Link to Reading the fine print on AI vendors"></a>
             </div>
-            <p>Every AI tool swears it's secure, the same way every used car was only ever driven to church on Sundays. So I ask the politely annoying questions. Is our data used to train their models, and is that promise in the contract or just on the marketing page? How long are prompts retained, and is zero-data-retention on the menu? Where does the data live, which subprocessors touch it, is there SSO and audit logging, and, for public-sector folks, what's the FedRAMP story?</p>
-            <ul class="tag-list" aria-label="Topics">
-              <li>Training-data claims</li><li>Retention &amp; residency</li><li>Subprocessors</li><li>SSO &amp; audit logs</li><li>FedRAMP</li>
+            <p class="tool-lead">Every AI tool swears it's secure, the same way every used car was only ever driven to church on Sundays. So I ask the politely annoying questions.</p>
+            <ul class="tool-points">
+              <li>Is our data used for training, and is that promise in the contract or just on the marketing page?</li>
+              <li>How long are prompts retained, and is zero-data-retention on the menu?</li>
+              <li>Where does the data live, and which subprocessors touch it?</li>
+              <li>Is there SSO, audit logging, and a real incident-response story?</li>
+              <li>For public-sector folks: what's the FedRAMP status?</li>
             </ul>
           </article>
 
@@ -494,20 +511,27 @@
               <h3>Fundamentals, explained like a human</h3>
               <a class="anchor-link" href="#toolbox-fundamentals" aria-label="Link to Fundamentals, explained like a human"></a>
             </div>
-            <p>I genuinely, nerdily love explaining how this stuff works. Supervised versus unsupervised learning. What a transformer's attention mechanism is really doing. Why a bidirectional encoder like BERT reads a sentence so differently from a GPT-style model that writes one token at a time. What tokens and context windows actually cost, how embeddings turn meaning into geometry, and why models hallucinate with such breathtaking, unearned confidence.</p>
-            <ul class="tag-list" aria-label="Topics">
-              <li>Machine learning</li><li>Transformers &amp; attention</li><li>Embeddings</li><li>Tokens &amp; context windows</li><li>Hallucination</li>
+            <p class="tool-lead">I genuinely, nerdily love explaining how this stuff works, minus the jargon fog.</p>
+            <ul class="tool-points">
+              <li>Supervised versus unsupervised learning</li>
+              <li>What a transformer's attention mechanism is really doing</li>
+              <li>Why a bidirectional encoder like BERT reads a sentence differently than a GPT-style model writes one</li>
+              <li>What tokens and context windows actually cost</li>
+              <li>How embeddings turn meaning into geometry, and why models hallucinate with such breathtaking confidence</li>
             </ul>
           </article>
 
           <article class="tool-card" id="toolbox-agents">
             <div class="heading-row">
-              <h3>Agents and AI-assisted building</h3>
+              <h3>Agents and AI‑assisted building</h3>
               <a class="anchor-link" href="#toolbox-agents" aria-label="Link to Agents and AI-assisted building"></a>
             </div>
-            <p>I don't just talk about AI coding tools, I build with them, <a href="#built-with-ai">this very site included</a>. Agentic workflows are wonderfully powerful and mildly terrifying in roughly equal measure, a bit like handing a brilliant, heavily caffeinated intern the keys to production. So I think hard about tool use, the Model Context Protocol, permission boundaries, human approval steps, and exactly how much autonomy any piece of software should earn before it gets anywhere near the big red button.</p>
-            <ul class="tag-list" aria-label="Topics">
-              <li>Agentic workflows</li><li>Tool use &amp; MCP</li><li>Permission boundaries</li><li>Claude Code</li>
+            <p class="tool-lead">I don't just talk about AI coding tools, I build with them, <a href="#built-with-ai">this very site included</a>. Agents are a bit like handing a brilliant, heavily caffeinated intern the keys to production.</p>
+            <ul class="tool-points">
+              <li>Tool use and the Model Context Protocol (MCP)</li>
+              <li>Permission boundaries and least privilege for agents</li>
+              <li>Human approval before anything irreversible</li>
+              <li>How much autonomy software should earn before it gets near the big red button</li>
             </ul>
           </article>
 
@@ -585,77 +609,77 @@
         </div>
         <div class="faq-list">
 
-          <article class="faq-item" id="faq-what-is-enterprise-ai-enablement">
-            <div class="heading-row">
-              <h3>What is enterprise AI enablement?</h3>
-              <a class="anchor-link" href="#faq-what-is-enterprise-ai-enablement" aria-label="Link to this question"></a>
+          <details class="faq-item" id="faq-what-is-enterprise-ai-enablement" open>
+            <summary><h3>What is enterprise AI enablement?</h3></summary>
+            <div class="faq-answer">
+              <p><strong>Enterprise AI enablement is the work of helping large organizations adopt AI safely, usefully, and at scale.</strong> It covers the operating model, governed access to large language models, use-case intake and lifecycle, RAG programs, AI software review, cost visibility, and workforce training. Picking a model is maybe ten percent of it. The other ninety percent is making sure the thing is secure, owned, funded, understood, and still running six months after the launch party.</p>
+              <a class="faq-permalink" href="#faq-what-is-enterprise-ai-enablement">Link to this answer</a>
             </div>
-            <p>Enterprise AI enablement is the work of helping large organizations adopt AI safely, usefully, and at scale. It covers the operating model, governed access to large language models, use-case intake and lifecycle, RAG programs, AI software review, cost visibility, and workforce training. Picking a model is maybe ten percent of it. The other ninety percent is making sure the thing is secure, owned, funded, understood, and still running six months after the launch party.</p>
-          </article>
+          </details>
 
-          <article class="faq-item" id="faq-why-ai-pilots-fail">
-            <div class="heading-row">
-              <h3>Why do so many enterprise AI pilots never make it to production?</h3>
-              <a class="anchor-link" href="#faq-why-ai-pilots-fail" aria-label="Link to this question"></a>
+          <details class="faq-item" id="faq-why-ai-pilots-fail">
+            <summary><h3>Why do so many enterprise AI pilots never make it to production?</h3></summary>
+            <div class="faq-answer">
+              <p><strong>Most AI pilots stall because of everything around the model, not the model itself.</strong> Common culprits include unanswered security and data questions, governance reviews that act like bottlenecks, no clear owner for the service or the bill, and no plan for monitoring and support once real users arrive. A pilot proves something can work. Production proves somebody is willing to be responsible for it.</p>
+              <a class="faq-permalink" href="#faq-why-ai-pilots-fail">Link to this answer</a>
             </div>
-            <p>Most AI pilots stall because of everything around the model, not the model itself. Common culprits include unanswered security and data questions, governance reviews that act like bottlenecks, no clear owner for the service or the bill, and no plan for monitoring and support once real users arrive. A pilot proves something can work. Production proves somebody is willing to be responsible for it.</p>
-          </article>
+          </details>
 
-          <article class="faq-item" id="faq-rag-program">
-            <div class="heading-row">
-              <h3>What does a RAG chatbot program need beyond the chatbot itself?</h3>
-              <a class="anchor-link" href="#faq-rag-program" aria-label="Link to this question"></a>
+          <details class="faq-item" id="faq-rag-program">
+            <summary><h3>What does a RAG chatbot program need beyond the chatbot itself?</h3></summary>
+            <div class="faq-answer">
+              <p><strong>A RAG (retrieval-augmented generation) program needs a governed document ingestion pipeline, sensible chunking and embedding choices, permission-aware retrieval, citations users can verify, evaluation for groundedness and answer quality, cost tracking, and a clear support and ownership model.</strong> The chatbot is the storefront. The program is the warehouse, the supply chain, and the people who restock the shelves.</p>
+              <a class="faq-permalink" href="#faq-rag-program">Link to this answer</a>
             </div>
-            <p>A RAG (retrieval-augmented generation) program needs a governed document ingestion pipeline, sensible chunking and embedding choices, permission-aware retrieval, citations users can verify, evaluation for groundedness and answer quality, cost tracking, and a clear support and ownership model. The chatbot is the storefront. The program is the warehouse, the supply chain, and the people who restock the shelves.</p>
-          </article>
+          </details>
 
-          <article class="faq-item" id="faq-llm-access-governance">
-            <div class="heading-row">
-              <h3>How should an organization govern access to large language models?</h3>
-              <a class="anchor-link" href="#faq-llm-access-governance" aria-label="Link to this question"></a>
+          <details class="faq-item" id="faq-llm-access-governance">
+            <summary><h3>How should an organization govern access to large language models?</h3></summary>
+            <div class="faq-answer">
+              <p><strong>A practical pattern is a central API gateway in front of approved model providers, with least-privilege IAM roles, per-team credentials and quotas, an approved-model allow-list, token metering for cost visibility, logging, and input and output guardrails.</strong> The goal is access that is safe enough for the security team and fast enough that employees don't go hunting for unsanctioned workarounds.</p>
+              <a class="faq-permalink" href="#faq-llm-access-governance">Link to this answer</a>
             </div>
-            <p>A practical pattern is a central API gateway in front of approved model providers, with least-privilege IAM roles, per-team credentials and quotas, an approved-model allow-list, token metering for cost visibility, logging, and input and output guardrails. The goal is access that is safe enough for the security team and fast enough that employees don't go hunting for unsanctioned workarounds.</p>
-          </article>
+          </details>
 
-          <article class="faq-item" id="faq-ai-software-review">
-            <div class="heading-row">
-              <h3>What should you check before approving an AI-enabled software tool?</h3>
-              <a class="anchor-link" href="#faq-ai-software-review" aria-label="Link to this question"></a>
+          <details class="faq-item" id="faq-ai-software-review">
+            <summary><h3>What should you check before approving an AI-enabled software tool?</h3></summary>
+            <div class="faq-answer">
+              <p><strong>Before approving an AI tool, confirm whether your data is used to train the vendor's models (and whether that's guaranteed in the contract), how long prompts and outputs are retained, where data is stored and processed, which subprocessors are involved, whether SSO and audit logging are supported, and how the vendor handles security incidents.</strong> For public-sector buyers, authorization status such as FedRAMP matters too.</p>
+              <a class="faq-permalink" href="#faq-ai-software-review">Link to this answer</a>
             </div>
-            <p>Before approving an AI tool, confirm whether your data is used to train the vendor's models (and whether that's guaranteed in the contract), how long prompts and outputs are retained, where data is stored and processed, which subprocessors are involved, whether SSO and audit logging are supported, and how the vendor handles security incidents. For public-sector buyers, authorization status such as FedRAMP matters too.</p>
-          </article>
+          </details>
 
-          <article class="faq-item" id="faq-who-steve-works-with">
-            <div class="heading-row">
-              <h3>Who does Steve Bogucki work with?</h3>
-              <a class="anchor-link" href="#faq-who-steve-works-with" aria-label="Link to this question"></a>
+          <details class="faq-item" id="faq-who-steve-works-with">
+            <summary><h3>Who does Steve Bogucki work with?</h3></summary>
+            <div class="faq-answer">
+              <p><strong>Steve works with senior executives, CIOs, CTOs, CDOs, AI program leaders, public-sector technology leaders, regulated-enterprise teams, product owners, and data and analytics leaders.</strong> Basically, anyone trying to move AI from interesting to operational inside a complex, governed organization. He's also happy to talk with organizations that are building out their own internal AI teams.</p>
+              <a class="faq-permalink" href="#faq-who-steve-works-with">Link to this answer</a>
             </div>
-            <p>Steve works with senior executives, CIOs, CTOs, CDOs, AI program leaders, public-sector technology leaders, regulated-enterprise teams, product owners, and data and analytics leaders. Basically, anyone trying to move AI from interesting to operational inside a complex, governed organization. He's also happy to talk with organizations that are building out their own internal AI teams.</p>
-          </article>
+          </details>
 
-          <article class="faq-item" id="faq-ai-training">
-            <div class="heading-row">
-              <h3>Can Steve train executives and non-technical staff on AI?</h3>
-              <a class="anchor-link" href="#faq-ai-training" aria-label="Link to this question"></a>
+          <details class="faq-item" id="faq-ai-training">
+            <summary><h3>Can Steve train executives and non-technical staff on AI?</h3></summary>
+            <div class="faq-answer">
+              <p><strong>Yes.</strong> Steve has delivered AI and machine learning training to broad enterprise audiences, covering supervised and unsupervised learning, transformers, bidirectional context, large language models, RAG, governance, and practical use-case development. The training is technically accurate but approachable, built so that non-engineers walk away more confident rather than more confused.</p>
+              <a class="faq-permalink" href="#faq-ai-training">Link to this answer</a>
             </div>
-            <p>Yes. Steve has delivered AI and machine learning training to broad enterprise audiences, covering supervised and unsupervised learning, transformers, bidirectional context, large language models, RAG, governance, and practical use-case development. The training is technically accurate but approachable, built so that non-engineers walk away more confident rather than more confused.</p>
-          </article>
+          </details>
 
-          <article class="faq-item" id="faq-affiliation">
-            <div class="heading-row">
-              <h3>Does BOGOODSKI.dev represent a government agency or employer?</h3>
-              <a class="anchor-link" href="#faq-affiliation" aria-label="Link to this question"></a>
+          <details class="faq-item" id="faq-affiliation">
+            <summary><h3>Does BOGOODSKI.dev represent a government agency or employer?</h3></summary>
+            <div class="faq-answer">
+              <p><strong>No.</strong> BOGOODSKI.dev is an independent professional site by Steve Bogucki. The views and services described here are personal and do not represent or imply endorsement by any employer, government agency, or affiliated organization.</p>
+              <a class="faq-permalink" href="#faq-affiliation">Link to this answer</a>
             </div>
-            <p>No. BOGOODSKI.dev is an independent professional site by Steve Bogucki. The views and services described here are personal and do not represent or imply endorsement by any employer, government agency, or affiliated organization.</p>
-          </article>
+          </details>
 
-          <article class="faq-item" id="faq-built-with-ai">
-            <div class="heading-row">
-              <h3>Was this website built with AI?</h3>
-              <a class="anchor-link" href="#faq-built-with-ai" aria-label="Link to this question"></a>
+          <details class="faq-item" id="faq-built-with-ai">
+            <summary><h3>Was this website built with AI?</h3></summary>
+            <div class="faq-answer">
+              <p><strong>Yes, openly and on purpose.</strong> The site was designed and coded with Claude Code, Anthropic's agentic coding tool, and the copy was drafted with AI help and then edited by Steve until it sounded like him. The headshot is a real photo with a moderate AI touch-up, and the logo and social image were generated with ChatGPT. Every claim on the page is Steve's to stand behind.</p>
+              <a class="faq-permalink" href="#faq-built-with-ai">Link to this answer</a>
             </div>
-            <p>Yes, openly and on purpose. The site was designed and coded with Claude Code, Anthropic's agentic coding tool, and the copy was drafted with AI help and then edited by Steve until it sounded like him. The headshot is a real photo with a moderate AI touch-up, and the logo and social image were generated with ChatGPT. Every claim on the page is Steve's to stand behind.</p>
-          </article>
+          </details>
 
         </div>
       </div>
@@ -684,7 +708,8 @@
           <h2 id="built-heading">Full disclosure: an AI helped build this site.</h2>
           <a class="anchor-link" href="#built-with-ai" aria-label="Link to this section: how this site was built with AI"></a>
         </div>
-        <p>It would be a little ridiculous, like a personal trainer who sneakily takes the elevator, for me to make a living advising organizations on AI adoption and then pretend I lovingly hand-carved every line of this website by candlelight. I didn't. This site was designed, coded, and tuned in a long and surprisingly fun back-and-forth with <strong>Claude Code</strong>, Anthropic's agentic coding tool, with me steering, second-guessing, rewriting, and occasionally reining in its boundless enthusiasm.</p>
+        <p>It would be a little ridiculous, like a personal trainer who sneakily takes the elevator, for me to make a living advising organizations on AI adoption and then pretend I lovingly hand-carved every line of this website by candlelight. I didn't.</p>
+        <p>This site was designed, coded, and tuned in a long and surprisingly fun back-and-forth with <strong>Claude Code</strong>, Anthropic's agentic coding tool, with me steering, second-guessing, rewriting, and occasionally reining in its boundless enthusiasm.</p>
         <p>Here's the honest breakdown, no fine print:</p>
         <dl class="disclosure-list">
           <div>
@@ -733,38 +758,46 @@
 
   <!-- Footer -->
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <span class="logo-name">BOGOODSKI</span><span class="logo-dot">.dev</span>
-        <p class="footer-tagline">Enterprise AI, but human-sized. By Steve Bogucki.</p>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#top" class="logo footer-logo" aria-label="Back to top of BOGOODSKI.dev"><span class="logo-name">BOGOODSKI</span><span class="logo-dot">.dev</span></a>
+          <p class="footer-tagline">Enterprise AI, but human-sized. By Steve Bogucki.</p>
+          <a href="mailto:stevebogucki12@gmail.com" class="footer-email">stevebogucki12@gmail.com</a>
+        </div>
+        <nav class="footer-col" aria-labelledby="footer-nav-heading">
+          <p class="footer-heading" id="footer-nav-heading">On this page</p>
+          <ul class="footer-nav">
+            <li><a href="#problem">The problem</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#approach">Approach</a></li>
+            <li><a href="#toolbox">Toolbox</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#article">Field note</a></li>
+            <li><a href="#who-for">Who it's for</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#built-with-ai">Built with AI</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="footer-col">
+          <p class="footer-heading">Elsewhere</p>
+          <ul class="footer-social">
+            <li><a href="https://www.linkedin.com/in/sbogucki12/" target="_blank" rel="noopener noreferrer me">LinkedIn</a></li>
+            <li><a href="https://medium.com/@bogoodski" target="_blank" rel="noopener noreferrer me">Medium</a></li>
+            <li><a href="https://github.com/sbogucki12" target="_blank" rel="noopener noreferrer me">GitHub</a></li>
+            <li><a href="https://www.instagram.com/bogoodskiruns/" target="_blank" rel="noopener noreferrer me">Running</a></li>
+          </ul>
+        </div>
       </div>
-      <nav class="footer-nav" aria-label="On this page">
-        <ul>
-          <li><a href="#problem">The problem</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#approach">Approach</a></li>
-          <li><a href="#toolbox">Toolbox</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#article">Field note</a></li>
-          <li><a href="#who-for">Who it's for</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#built-with-ai">Built with AI</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="footer-links">
-        <a href="mailto:stevebogucki12@gmail.com">stevebogucki12@gmail.com</a>
-        <a href="https://www.linkedin.com/in/sbogucki12/" target="_blank" rel="noopener noreferrer me">LinkedIn</a>
-        <a href="https://medium.com/@bogoodski" target="_blank" rel="noopener noreferrer me">Medium</a>
-        <a href="https://github.com/sbogucki12" target="_blank" rel="noopener noreferrer me">GitHub</a>
-        <a href="https://www.instagram.com/bogoodskiruns/" target="_blank" rel="noopener noreferrer me">Running (Instagram)</a>
+      <div class="footer-bottom">
+        <p class="footer-meta">Last updated <time datetime="2026-11-06">November 6, 2026</time>. Built with Claude Code. <a href="#built-with-ai">Here's how.</a></p>
+        <p class="footer-disclaimer">BOGOODSKI.dev is an independent professional site by Steve Bogucki. The views and services described here are personal and do not represent or imply endorsement by any employer, government agency, or affiliated organization.</p>
       </div>
-      <p class="footer-meta">Last updated <time datetime="2026-11-06">November 6, 2026</time>. Built with Claude Code. <a href="#built-with-ai">Here's how.</a></p>
-      <p class="footer-disclaimer">BOGOODSKI.dev is an independent professional site by Steve Bogucki. The views and services described here are personal and do not represent or imply endorsement by any employer, government agency, or affiliated organization.</p>
     </div>
   </footer>
 
-  <script src="/script.js" defer></script>
+  <script src="/script.js?v=20261106b" defer></script>
 </body>
 </html>

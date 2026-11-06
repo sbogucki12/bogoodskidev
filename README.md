@@ -46,6 +46,14 @@ Push to `main` → Netlify publishes the repo root (`publish = "."`). Every file
 
 ## Changelog
 
+### 2026-11-06 (later): Readability and layout polish
+- **Toolbox** cards rebuilt for scanning: a short italic lead line (the analogy) and a checkmark list, instead of dense paragraphs.
+- **FAQ** is now an accessible `<details>` accordion. The first answer is open; each answer's first sentence is bold; "Link to this answer" copies a deep link. Deep links to a question auto-open it. All text stays in the HTML, so FAQ schema parity holds.
+- **Footer** redesigned: brand + email, a two-column "On this page" index, and an "Elsewhere" column, above a bottom bar with the date and disclaimer. It collapses cleanly on tablets and phones.
+- **Grids** use explicit breakpoints: services 1/2/3 columns (the 7th card spans the row as a closer), approach 1/2/4 columns, so there are no orphan cards at any width.
+- **Cache-busting:** `styles.css` and `script.js` are referenced with `?v=` query strings. Returning visitors with a stale cached stylesheet were seeing old layouts (list numbers beside the approach cards, stacked footer links).
+- Smaller polish: `text-wrap: pretty` on card headings, non-breaking hyphen in "AI-assisted", split long paragraphs, smaller hero copy on phones, tighter service-card padding.
+
 ### 2026-11-06: AI search optimization, AI transparency, security hardening
 
 A full review and overhaul, built with Claude Code.
