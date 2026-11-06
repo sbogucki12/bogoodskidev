@@ -81,12 +81,12 @@ Headless Chrome on Windows enforces a ~500px minimum window width, so a `--windo
 ## 5. Roadmap / open items
 
 **High priority**
-- [ ] **Fix the domain.** As of 2026-11-06, `https://bogoodski.dev` (and `www`) answer with a **301 to `https://bogoodski.netlify.app/`** (registrar URL forwarding). Crawlers and AI engines therefore see content on `netlify.app` while the canonical says `bogoodski.dev`. Fix: Netlify → Domain management → add `bogoodski.dev` as the **primary domain**, then at the registrar remove URL forwarding and point DNS at Netlify (apex A/ALIAS per Netlify's instructions, `www` CNAME → `bogoodski.netlify.app`, or delegate DNS to Netlify). Netlify then provisions TLS automatically.
+- [ ] **Fix the domain.** *(In progress 2026-11-06: GoDaddy A `@` → 75.2.60.5 and CNAME `www` → bogoodski.netlify.app are set; the leftover GoDaddy "Parked" A record must be deleted, then provision the Netlify certificate.)* As of 2026-11-06, `https://bogoodski.dev` (and `www`) answer with a **301 to `https://bogoodski.netlify.app/`** (registrar URL forwarding). Crawlers and AI engines therefore see content on `netlify.app` while the canonical says `bogoodski.dev`. Fix: Netlify → Domain management → add `bogoodski.dev` as the **primary domain**, then at the registrar remove URL forwarding and point DNS at Netlify (apex A/ALIAS per Netlify's instructions, `www` CNAME → `bogoodski.netlify.app`, or delegate DNS to Netlify). Netlify then provisions TLS automatically.
 - [ ] **After** the domain serves directly from Netlify (not before, or it will loop): add a 301 in `netlify.toml` from `https://bogoodski.netlify.app/*` → `https://bogoodski.dev/:splat`.
 - [ ] Run securityheaders.com and Google Rich Results Test against the live domain; fix anything flagged.
 
 **Soon**
-- [ ] Add Steve's **DJ profile URL** to `Person.sameAs`, the footer "Elsewhere" column, and the llms files (running and GitHub were added 2026-11-06; the DJ URL hasn't been provided yet).
+- [x] Profile links in `Person.sameAs`, footer "Elsewhere", and llms files: LinkedIn, Medium, GitHub, Instagram (running), SoundCloud (DJ).
 - [ ] Refresh the LinkedIn post-inspector cache for the new social card (`/assets/img/social-card.jpg`).
 - [ ] Renew `.well-known/security.txt` **before 2027-11-01** (update `Expires`).
 

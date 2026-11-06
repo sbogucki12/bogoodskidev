@@ -24,3 +24,7 @@ Desktop.ini
 # Screenshots used for design review/testing (never publish)
 assets/screenshot*
 screenshots/
+
+# Local reference screenshots in assets/ root (real site images live in assets/img and assets/icons)
+assets/*.png
+assets/*.jpg

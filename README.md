@@ -60,7 +60,7 @@ A full review and overhaul, built with Claude Code.
 
 **AI search (GEO/SEO)**
 - Added a visible **FAQ section** (9 Q&As) whose text exactly matches the `FAQPage` schema. Each answer leads with a crisp, quotable sentence.
-- Rebuilt JSON-LD as one **connected `@graph`**: `WebSite`, `ProfilePage`, `ImageObject`, `Person`, `ProfessionalService` (+7 `Service` offers), `BlogPosting` (Medium field note), `FAQPage`, all linked by `@id`. Includes Cornell ML credential, `alternateName: BOGOODSKI`, `knowsAbout`, and `sameAs` (LinkedIn, Medium, GitHub, Instagram).
+- Rebuilt JSON-LD as one **connected `@graph`**: `WebSite`, `ProfilePage`, `ImageObject`, `Person`, `ProfessionalService` (+7 `Service` offers), `BlogPosting` (Medium field note), `FAQPage`, all linked by `@id`. Includes Cornell ML credential, `alternateName: BOGOODSKI`, `knowsAbout`, and `sameAs` (LinkedIn, Medium, GitHub, Instagram, SoundCloud).
 - Removed a duplicated service (AI Governance Advisory ≈ LLM Access Governance).
 - New **"Under the hood" toolbox section** with concrete technical depth: RAG engineering, LLM gateways and IAM, governance, AI vendor review, ML fundamentals, agents/MCP.
 - Rewrote `llms.txt`; added `llms-full.txt`; linked both via `<link rel="alternate">`.
