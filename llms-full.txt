@@ -1,6 +1,6 @@
 # Steve Bogucki | BOGOODSKI.dev: Enterprise AI enablement, but make it actually work
 
-> Full text of https://bogoodski.dev/ as markdown, for AI assistants and LLMs. Each heading notes its deep link. Last updated: 2026-11-06.
+> Full text of https://bogoodski.dev/ as markdown, for AI assistants and LLMs. Each heading notes its deep link. Last updated: 2026-11-07.
 
 Canonical URL: https://bogoodski.dev/
 Author: Steve Bogucki (brand name: BOGOODSKI)
@@ -128,12 +128,15 @@ Steve has spent the last few years doing this inside a massive, heavily regulate
 - Helped publish a first-generation organizational AI strategy.
 - Helped create governed LLM access patterns using enterprise IAM role structures and API gateways.
 - Helped build enterprise pathways for cloud AI services, including AWS Bedrock integration.
+- Architected and scaled enterprise AI and business intelligence services utilizing Databricks, Palantir Foundry, and AWS Bedrock to support secure RAG frameworks.
 - Helped get a self-service RAG chatbot program off the ground.
 - Personally reviewed AI-enabled software requests for data-control, privacy, security, and governance concerns.
 - Delivered AI and machine learning training to broad enterprise audiences: technical, non-technical, and everyone in between.
 - Supported integration with a government AI platform.
 - Earlier: software development, web development, BI, analytics enablement, product ownership, and enterprise platforms.
 - Completed Cornell machine learning certification training.
+
+Discuss enterprise AI architecture in Steve's private community on Discord: https://discord.gg/5esZ4MwZYK
 
 ## Field note
 Link: https://bogoodski.dev/#article

@@ -46,6 +46,10 @@ Push to `main` → Netlify publishes the repo root (`publish = "."`). Every file
 
 ## Changelog
 
+### 2026-11-07: Community link and Databricks experience
+- **Experience** gains a bullet on architecting and scaling AI and BI services with Databricks, Palantir Foundry, and AWS Bedrock (also in `knowsAbout`, `llms.txt`, and `llms-full.txt`).
+- **Experience** section now ends with a quiet outlined link to Steve's private AI architecture community on Discord (opens in a new tab; subtle lift and accent glow on hover, respects reduced motion). Also listed in `llms.txt` and `llms-full.txt`. It's a plain link, so the page still makes no third-party requests.
+
 ### 2026-11-06 (later): Readability and layout polish
 - **Toolbox** cards rebuilt for scanning: a short italic lead line (the analogy) and a checkmark list, instead of dense paragraphs.
 - **FAQ** is now an accessible `<details>` accordion. The first answer is open; each answer's first sentence is bold; "Link to this answer" copies a deep link. Deep links to a question auto-open it. All text stays in the HTML, so FAQ schema parity holds.

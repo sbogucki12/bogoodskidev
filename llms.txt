@@ -4,7 +4,7 @@
 
 Steve has spent recent years helping stand up AI services from the inside of a large, heavily regulated U.S. federal environment serving tens of thousands of users. Before that: software development, web development, BI, analytics enablement, product ownership, and enterprise platforms. He holds Cornell machine learning certification training. The site is a single page with deep-linkable sections (listed below). It was built openly with AI assistance (Claude Code); see the disclosure section.
 
-Last updated: 2026-11-06
+Last updated: 2026-11-07
 
 ## Key pages and sections
 
@@ -13,7 +13,7 @@ Last updated: 2026-11-06
 - [Services](https://bogoodski.dev/#services): Seven service areas, from AI strategy to vendor review
 - [Approach](https://bogoodski.dev/#approach): Operating model first, usable governance, usable access, demo-to-production
 - [Technical toolbox](https://bogoodski.dev/#toolbox): RAG engineering, LLM gateways, governance, vendor review, ML fundamentals, agents
-- [Experience](https://bogoodski.dev/#experience): Hands-on enterprise AI enablement in a regulated federal environment
+- [Experience](https://bogoodski.dev/#experience): Hands-on enterprise AI enablement in a regulated federal environment, including AI and BI services on Databricks, Palantir Foundry, and AWS Bedrock
 - [FAQ](https://bogoodski.dev/#faq): Plain-English answers about enterprise AI enablement, RAG, LLM governance, and AI vendor review
 - [About](https://bogoodski.dev/#about): Background, working style, and the name
 - [Built with AI](https://bogoodski.dev/#built-with-ai): Transparent disclosure of how AI was used to build this site
@@ -37,6 +37,7 @@ Last updated: 2026-11-06
 
 - [Email](mailto:stevebogucki12@gmail.com): stevebogucki12@gmail.com
 - [LinkedIn](https://www.linkedin.com/in/sbogucki12/)
+- [Private AI architecture community, on Discord](https://discord.gg/5esZ4MwZYK): Discuss enterprise AI architecture
 - [Medium](https://medium.com/@bogoodski)
 - [GitHub](https://github.com/sbogucki12)
 - [Running, on Instagram](https://www.instagram.com/bogoodskiruns/)
