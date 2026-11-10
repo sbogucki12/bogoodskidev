@@ -11,9 +11,21 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Cross-Origin-Opener-Policy = "same-origin"
     Permissions-Policy = "accelerometer=(), browsing-topics=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()"
-    # No inline scripts or styles, no third-party origins. The JSON-LD block is a
-    # non-executable data block, so it is not subject to script-src.
-    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests"
+    # No inline scripts or styles. The JSON-LD block is a non-executable data
+    # block, so it is not subject to script-src.
+    # The only third-party origins are Google's, scoped to exactly what Google
+    # Analytics 4 via Google Tag Manager (GTM-5NZT7N56) needs:
+    #   script-src  www.googletagmanager.com        (gtm.js and gtag/js)
+    #   img-src     *.google-analytics.com,
+    #               www.googletagmanager.com        (pixel fallback hits)
+    #   connect-src *.google-analytics.com,
+    #               *.analytics.google.com,
+    #               www.googletagmanager.com        (collect beacons; GA4
+    #                                                uses regional subdomains)
+    # Still no 'unsafe-inline' or 'unsafe-eval', so GTM "Custom HTML" tags and
+    # custom JS variables will be blocked by design. Built-in GA4 tags work.
+    # Everything else (frames, fonts, styles, forms) stays same-origin/none.
+    Content-Security-Policy = "default-src 'self'; script-src 'self' https://www.googletagmanager.com; style-src 'self'; font-src 'self'; img-src 'self' data: https://*.google-analytics.com https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests"
 
 # Fonts never change under the same name: cache hard.
 [[headers]]

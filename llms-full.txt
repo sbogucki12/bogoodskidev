@@ -197,7 +197,7 @@ Link: https://bogoodski.dev/#built-with-ai
 - **Words:** Drafted with AI help, then edited by Steve. The experience and opinions are his.
 - **Photo:** A real photo of Steve with a moderate AI touch-up.
 - **Logo & social card:** Generated with ChatGPT's image tools.
-- **Under the hood:** Static HTML/CSS/vanilla JS with no framework, trackers, cookies, or third-party requests; strict Content Security Policy and HSTS; self-hosted font; right-sized WebP images; schema.org structured data; llms.txt and llms-full.txt; and deep links on every section.
+- **Under the hood:** Static HTML/CSS/vanilla JS with no framework or build step; Google Analytics via Google Tag Manager (the only third-party script; it sets first-party analytics cookies); strict Content Security Policy and HSTS; self-hosted font; right-sized WebP images; schema.org structured data; llms.txt and llms-full.txt; and deep links on every section.
 
 ## Contact
 Link: https://bogoodski.dev/#contact

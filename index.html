@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Google tag (GTM-5NZT7N56). The dataLayer bootstrap is a same-origin file,
+       not an inline script, so the CSP never needs 'unsafe-inline'. -->
+  <script src="/analytics.js?v=20261109a"></script>
+  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-5NZT7N56"></script>
+
   <title>Steve Bogucki | Enterprise AI enablement, but make it actually work | BOGOODSKI.dev</title>
   <meta name="description" content="Steve Bogucki helps big, complicated organizations make AI actually usable: LLM access governance, RAG programs, AI software review, use-case lifecycles, cost visibility, and AI training. The unglamorous plumbing nobody puts in the keynote deck.">
   <meta name="author" content="Steve Bogucki">
@@ -75,7 +80,7 @@
         "about": { "@id": "https://bogoodski.dev/#person" },
         "mainEntity": { "@id": "https://bogoodski.dev/#person" },
         "primaryImageOfPage": { "@id": "https://bogoodski.dev/#headshot" },
-        "dateModified": "2026-11-07",
+        "dateModified": "2026-11-09",
         "hasPart": [
           { "@type": "WebPageElement", "name": "The everything-around-AI problem", "url": "https://bogoodski.dev/#problem" },
           { "@type": "WebPageElement", "name": "Services", "url": "https://bogoodski.dev/#services" },
@@ -740,7 +745,8 @@
         </dl>
         <h3 class="built-subheading">What's under the hood (because I honestly can't help myself)</h3>
         <ul class="built-list">
-          <li>Plain, carefully tuned HTML, CSS, and a light sprinkle of vanilla JavaScript. No framework, no build step, no trackers, no cookies, no third-party requests.</li>
+          <li>Plain, carefully tuned HTML, CSS, and a light sprinkle of vanilla JavaScript, with no framework and no build step.</li>
+          <li>One honest exception to the "everything comes from this site" rule: Google Analytics, loaded through Google Tag Manager, which sets a couple of cookies so I can see, in aggregate, which parts of the page people actually read. It's the only third-party script here, and the security policy is fenced tightly around it.</li>
           <li>A strict Content Security Policy, HSTS, and locked-down permissions headers, because practicing what I preach includes the boring security parts.</li>
           <li>A self-hosted variable font and right-sized WebP images, so the page loads briskly even on a phone clinging to one bar of signal.</li>
           <li>Schema.org structured data that wires me, my services, and the FAQ above into a tidy little knowledge graph.</li>
@@ -802,12 +808,12 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p class="footer-meta">Last updated <time datetime="2026-11-07">November 7, 2026</time>. Built with Claude Code. <a href="#built-with-ai">Here's how.</a></p>
+        <p class="footer-meta">Last updated <time datetime="2026-11-09">November 9, 2026</time>. Built with Claude Code. <a href="#built-with-ai">Here's how.</a></p>
         <p class="footer-disclaimer">BOGOODSKI.dev is an independent professional site by Steve Bogucki. The views and services described here are personal and do not represent or imply endorsement by any employer, government agency, or affiliated organization.</p>
       </div>
     </div>
   </footer>
 
-  <script src="/script.js?v=20261106b" defer></script>
+  <script src="/script.js?v=20261109a" defer></script>
 </body>
 </html>

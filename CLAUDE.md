@@ -37,7 +37,8 @@ Steve's voice: **professional but informal; fun and light; flowing, stream-of-co
 - **Headshot at 70% opacity.** Steve likes the faded look. Keep it.
 - **Personal Gmail is published** (stevebogucki12@gmail.com). Steve is fine with scraping/spam. Don't swap it for a form or an obfuscated address.
 - **AI transparency is a feature.** The "Built with AI" section and FAQ must stay accurate. If tools or processes change (new images, new AI tools), update both, the schema FAQ, and `llms-full.txt`.
-- **No frameworks, no build step, no trackers, no cookies, no third-party requests.** The page claims this publicly, so adding analytics, embeds, CDNs, or web fonts from other origins makes the disclosure false *and* requires CSP changes. Discuss first.
+- **No frameworks, no build step.** The **only** third-party origin is Google Analytics via Google Tag Manager (`GTM-5NZT7N56`, added 2026-11-09 at Steve's request; it sets first-party GA cookies). The page discloses this in "Built with AI" and `llms-full.txt`. Adding any *other* embeds, CDNs, web fonts, or GTM tags that need new origins requires CSP changes *and* a disclosure update. Discuss first.
+- GTM is constrained by the CSP: no `'unsafe-inline'`/`'unsafe-eval'`, so GTM **Custom HTML tags won't run** (by design). Use built-in tag types only. The `dataLayer` bootstrap lives in `analytics.js`, not inline.
 - JavaScript is **progressive enhancement only**; the page must work with JS off.
 
 ## 4. Engineering conventions & checklists
@@ -101,3 +102,4 @@ Headless Chrome on Windows enforces a ~500px minimum window width, so a `--windo
 ## 6. Session log
 - **2026-05:** Initial build and copy rewrite.
 - **2026-11-06:** AI-search overhaul, AI transparency section, toolbox section, FAQ, deep links, image/font optimization, responsive fixes, CSP/HSTS hardening, README + this manifest. Branch `ai-search-optimization` merged to `main`. Later the same day: readability/layout polish (toolbox checklists, FAQ accordion, footer redesign, orphan-free grids, CSS/JS cache-busting). See README changelog for details.
+- **2026-11-09:** Added Google Analytics via GTM (`analytics.js` + `gtm.js`), CSP scoped to Google's GA4/GTM origins only, "no trackers/cookies" claims removed from page, llms-full.txt, README, and this file.

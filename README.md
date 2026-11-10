@@ -4,7 +4,7 @@ The personal site of **Steve Bogucki**: enterprise AI enablement advisory, plus 
 
 - **Live:** https://bogoodski.dev (served directly by Netlify with a Let's Encrypt certificate; `www` and `bogoodski.netlify.app` 301 to it)
 - **Host:** Netlify, auto-deploying from `main`
-- **Stack:** hand-written static HTML, CSS, and vanilla JS. No framework, no build step, no trackers, no cookies, no third-party requests.
+- **Stack:** hand-written static HTML, CSS, and vanilla JS. No framework, no build step. The only third-party script is Google Analytics via Google Tag Manager (`GTM-5NZT7N56`), which sets first-party analytics cookies.
 - **Working notes for future sessions:** [`CLAUDE.md`](CLAUDE.md) (the project manifest: philosophy, conventions, roadmap)
 
 ---
@@ -16,6 +16,7 @@ The personal site of **Steve Bogucki**: enterprise AI enablement advisory, plus 
 | `index.html` | The whole site (single page) plus the JSON-LD structured data graph in `<head>` |
 | `styles.css` | All styling; self-hosted Inter font via `@font-face` |
 | `script.js` | Progressive enhancement only: mobile nav, deep-link copy, active-section highlighting |
+| `analytics.js` | Google tag `dataLayer` bootstrap (the inline half of Google's snippet, moved to a file so the CSP needs no `'unsafe-inline'`) |
 | `llms.txt` | Concise, LLM-friendly site index ([llmstxt.org](https://llmstxt.org) format) |
 | `llms-full.txt` | Entire site content as clean markdown for AI assistants |
 | `robots.txt` | Allows everyone, and explicitly welcomes AI search/assistant crawlers |
@@ -45,6 +46,12 @@ Push to `main` → Netlify publishes the repo root (`publish = "."`). Every file
 ---
 
 ## Changelog
+
+### 2026-11-09: Google Analytics (via Google Tag Manager)
+- Added the Google tag for container `GTM-5NZT7N56` right after `<head>`: `/analytics.js` (same-origin `dataLayer` bootstrap) followed by async `gtm.js` from `www.googletagmanager.com`.
+- **CSP** opened only as far as GA4-through-GTM needs: `script-src` + `www.googletagmanager.com`; `img-src` + `*.google-analytics.com`, `www.googletagmanager.com`; `connect-src` + `*.google-analytics.com`, `*.analytics.google.com`, `www.googletagmanager.com`. No `'unsafe-inline'`/`'unsafe-eval'`, so GTM Custom HTML tags and custom JS variables are blocked by design; built-in GA4 tags work. All other directives and headers unchanged.
+- **Disclosure kept honest:** the "Built with AI" under-the-hood list, `llms-full.txt`, `script.js` header comment, and this README no longer claim "no trackers, no cookies, no third-party requests."
+- If GTM later gets tags that need other origins (Google Ads, Signals/remarketing, GTM Preview mode, etc.), the CSP must be extended deliberately; violations show in the browser console.
 
 ### 2026-11-07: Community link and Databricks experience
 - **Experience** gains a bullet on architecting and scaling AI and BI services with Databricks, Palantir Foundry, and AWS Bedrock (also in `knowsAbout`, `llms.txt`, and `llms-full.txt`).

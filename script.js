@@ -1,6 +1,6 @@
 /* ==========================================================================
    BOGOODSKI.dev — Script
-   No dependencies, no trackers, no cookies. Just a little progressive
+   No dependencies, no cookies (analytics lives in analytics.js). Just a little progressive
    enhancement; the page works fine without it.
    ========================================================================== */
 
